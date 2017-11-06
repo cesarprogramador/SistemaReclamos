@@ -1,0 +1,12 @@
+d:\fenix\documents\visual studio 2012\Projects\SistemaReclamos\SistemaReclamos\bin\Debug\SistemaReclamos.exe.config
+d:\fenix\documents\visual studio 2012\Projects\SistemaReclamos\SistemaReclamos\bin\Debug\SistemaReclamos.exe
+d:\fenix\documents\visual studio 2012\Projects\SistemaReclamos\SistemaReclamos\bin\Debug\SistemaReclamos.pdb
+d:\fenix\documents\visual studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.csprojResolveAssemblyReference.cache
+d:\fenix\documents\visual studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.Properties.Resources.resources
+d:\fenix\documents\visual studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.csproj.GenerateResource.Cache
+d:\fenix\documents\visual studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.exe
+d:\fenix\documents\visual studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.pdb
+d:\fenix\documents\visual studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.ABMClientes.resources
+D:\Fenix\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.ABMEmpleados.resources
+D:\Fenix\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.ABMReclamos.resources
+D:\Fenix\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.MenuPrincipal.resources
