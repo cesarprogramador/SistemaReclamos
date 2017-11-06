@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ABMReclamos));
-            this.txtBusApellidoynombre = new System.Windows.Forms.TextBox();
+            this.txtBusApellido = new System.Windows.Forms.TextBox();
             this.txtBusDni = new System.Windows.Forms.TextBox();
             this.gbxBuscador = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBusCodigo = new System.Windows.Forms.TextBox();
@@ -42,14 +42,9 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.gbxDetalleCliente = new System.Windows.Forms.GroupBox();
-            this.cbTipoServicio = new System.Windows.Forms.TextBox();
-            this.cbLocalidades = new System.Windows.Forms.TextBox();
-            this.cbProvincias = new System.Windows.Forms.TextBox();
+            this.txtTipoServicio = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.txtDomicilio = new System.Windows.Forms.TextBox();
-            this.txtNumeroreferencia = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtObservacion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -67,12 +62,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pnlPreguntas = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbRespuesta = new System.Windows.Forms.ComboBox();
-            this.btnCargarRespuesta = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.cbPregunta = new System.Windows.Forms.ComboBox();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -80,33 +69,30 @@
             this.gbxAcciones = new System.Windows.Forms.GroupBox();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.pnlTipoReclamos = new System.Windows.Forms.Panel();
+            this.txtBusNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbBusProblematica = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.cbTipoReclamo = new System.Windows.Forms.Label();
-            this.cbBusTipoReclamo = new System.Windows.Forms.ComboBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbReferenciaReclamos = new System.Windows.Forms.ComboBox();
             this.gbxBuscador.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.gbxDetalleCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleProcesoReclamo)).BeginInit();
-            this.pnlPreguntas.SuspendLayout();
             this.gbxConfirmaAccion.SuspendLayout();
             this.gbxAcciones.SuspendLayout();
-            this.pnlTipoReclamos.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtBusApellidoynombre
+            // txtBusApellido
             // 
-            this.txtBusApellidoynombre.Location = new System.Drawing.Point(119, 93);
-            this.txtBusApellidoynombre.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBusApellidoynombre.Name = "txtBusApellidoynombre";
-            this.txtBusApellidoynombre.Size = new System.Drawing.Size(170, 20);
-            this.txtBusApellidoynombre.TabIndex = 54;
+            this.txtBusApellido.Location = new System.Drawing.Point(113, 76);
+            this.txtBusApellido.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBusApellido.Name = "txtBusApellido";
+            this.txtBusApellido.Size = new System.Drawing.Size(170, 20);
+            this.txtBusApellido.TabIndex = 54;
             // 
             // txtBusDni
             // 
-            this.txtBusDni.Location = new System.Drawing.Point(119, 63);
+            this.txtBusDni.Location = new System.Drawing.Point(113, 46);
             this.txtBusDni.Margin = new System.Windows.Forms.Padding(4);
             this.txtBusDni.Name = "txtBusDni";
             this.txtBusDni.Size = new System.Drawing.Size(170, 20);
@@ -114,21 +100,22 @@
             // 
             // gbxBuscador
             // 
-            this.gbxBuscador.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gbxBuscador.Controls.Add(this.txtBusApellidoynombre);
+            this.gbxBuscador.Controls.Add(this.txtBusNombre);
+            this.gbxBuscador.Controls.Add(this.label2);
+            this.gbxBuscador.Controls.Add(this.txtBusApellido);
             this.gbxBuscador.Controls.Add(this.label8);
             this.gbxBuscador.Controls.Add(this.txtBusDni);
             this.gbxBuscador.Controls.Add(this.label1);
-            this.gbxBuscador.Controls.Add(this.dgvArticulos);
+            this.gbxBuscador.Controls.Add(this.dgvClientes);
             this.gbxBuscador.Controls.Add(this.btnLimpiar);
             this.gbxBuscador.Controls.Add(this.btnBuscar);
             this.gbxBuscador.Controls.Add(this.txtBusCodigo);
             this.gbxBuscador.Controls.Add(this.label18);
-            this.gbxBuscador.Location = new System.Drawing.Point(13, 13);
+            this.gbxBuscador.Location = new System.Drawing.Point(11, 13);
             this.gbxBuscador.Margin = new System.Windows.Forms.Padding(4);
             this.gbxBuscador.Name = "gbxBuscador";
             this.gbxBuscador.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxBuscador.Size = new System.Drawing.Size(305, 724);
+            this.gbxBuscador.Size = new System.Drawing.Size(305, 626);
             this.gbxBuscador.TabIndex = 94;
             this.gbxBuscador.TabStop = false;
             this.gbxBuscador.Text = "Buscador";
@@ -136,7 +123,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(64, 96);
+            this.label8.Location = new System.Drawing.Point(65, 79);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 13);
@@ -146,32 +133,32 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 66);
+            this.label1.Location = new System.Drawing.Point(86, 49);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 13);
             this.label1.TabIndex = 44;
             this.label1.Text = "Dni:";
             // 
-            // dgvArticulos
+            // dgvClientes
             // 
-            this.dgvArticulos.AllowUserToAddRows = false;
-            this.dgvArticulos.AllowUserToDeleteRows = false;
-            this.dgvArticulos.AllowUserToOrderColumns = true;
-            this.dgvArticulos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulos.Location = new System.Drawing.Point(12, 192);
-            this.dgvArticulos.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvArticulos.Name = "dgvArticulos";
-            this.dgvArticulos.ReadOnly = true;
-            this.dgvArticulos.Size = new System.Drawing.Size(277, 516);
-            this.dgvArticulos.TabIndex = 43;
+            this.dgvClientes.AllowUserToAddRows = false;
+            this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.AllowUserToOrderColumns = true;
+            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientes.Location = new System.Drawing.Point(12, 192);
+            this.dgvClientes.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
+            this.dgvClientes.Size = new System.Drawing.Size(277, 418);
+            this.dgvClientes.TabIndex = 43;
+            this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
             // btnLimpiar
             // 
             this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
-            this.btnLimpiar.Location = new System.Drawing.Point(207, 129);
+            this.btnLimpiar.Location = new System.Drawing.Point(183, 135);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(82, 47);
@@ -179,11 +166,12 @@
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnBuscar
             // 
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(37, 129);
+            this.btnBuscar.Location = new System.Drawing.Point(36, 135);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(91, 47);
@@ -195,7 +183,7 @@
             // 
             // txtBusCodigo
             // 
-            this.txtBusCodigo.Location = new System.Drawing.Point(119, 35);
+            this.txtBusCodigo.Location = new System.Drawing.Point(113, 18);
             this.txtBusCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtBusCodigo.Name = "txtBusCodigo";
             this.txtBusCodigo.Size = new System.Drawing.Size(170, 20);
@@ -204,7 +192,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(22, 41);
+            this.label18.Location = new System.Drawing.Point(22, 21);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(89, 13);
@@ -232,15 +220,12 @@
             // 
             // gbxDetalleCliente
             // 
-            this.gbxDetalleCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gbxDetalleCliente.Controls.Add(this.cbTipoServicio);
-            this.gbxDetalleCliente.Controls.Add(this.cbLocalidades);
-            this.gbxDetalleCliente.Controls.Add(this.cbProvincias);
+            this.gbxDetalleCliente.Controls.Add(this.cbReferenciaReclamos);
+            this.gbxDetalleCliente.Controls.Add(this.txtCorreo);
+            this.gbxDetalleCliente.Controls.Add(this.label5);
+            this.gbxDetalleCliente.Controls.Add(this.txtTipoServicio);
             this.gbxDetalleCliente.Controls.Add(this.label14);
-            this.gbxDetalleCliente.Controls.Add(this.label9);
-            this.gbxDetalleCliente.Controls.Add(this.label13);
             this.gbxDetalleCliente.Controls.Add(this.txtDomicilio);
-            this.gbxDetalleCliente.Controls.Add(this.txtNumeroreferencia);
             this.gbxDetalleCliente.Controls.Add(this.label3);
             this.gbxDetalleCliente.Controls.Add(this.txtObservacion);
             this.gbxDetalleCliente.Controls.Add(this.label4);
@@ -253,68 +238,32 @@
             this.gbxDetalleCliente.Controls.Add(this.label11);
             this.gbxDetalleCliente.Controls.Add(this.txtCodigo);
             this.gbxDetalleCliente.Controls.Add(this.label12);
-            this.gbxDetalleCliente.Location = new System.Drawing.Point(326, 13);
+            this.gbxDetalleCliente.Location = new System.Drawing.Point(324, 13);
             this.gbxDetalleCliente.Margin = new System.Windows.Forms.Padding(4);
             this.gbxDetalleCliente.Name = "gbxDetalleCliente";
             this.gbxDetalleCliente.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxDetalleCliente.Size = new System.Drawing.Size(461, 306);
+            this.gbxDetalleCliente.Size = new System.Drawing.Size(461, 283);
             this.gbxDetalleCliente.TabIndex = 93;
             this.gbxDetalleCliente.TabStop = false;
             this.gbxDetalleCliente.Text = "Clientes";
             // 
-            // cbTipoServicio
+            // txtTipoServicio
             // 
-            this.cbTipoServicio.Location = new System.Drawing.Point(141, 270);
-            this.cbTipoServicio.Margin = new System.Windows.Forms.Padding(4);
-            this.cbTipoServicio.Name = "cbTipoServicio";
-            this.cbTipoServicio.Size = new System.Drawing.Size(292, 20);
-            this.cbTipoServicio.TabIndex = 92;
-            // 
-            // cbLocalidades
-            // 
-            this.cbLocalidades.Location = new System.Drawing.Point(141, 241);
-            this.cbLocalidades.Margin = new System.Windows.Forms.Padding(4);
-            this.cbLocalidades.Name = "cbLocalidades";
-            this.cbLocalidades.Size = new System.Drawing.Size(292, 20);
-            this.cbLocalidades.TabIndex = 91;
-            // 
-            // cbProvincias
-            // 
-            this.cbProvincias.Location = new System.Drawing.Point(141, 213);
-            this.cbProvincias.Margin = new System.Windows.Forms.Padding(4);
-            this.cbProvincias.Name = "cbProvincias";
-            this.cbProvincias.Size = new System.Drawing.Size(292, 20);
-            this.cbProvincias.TabIndex = 90;
+            this.txtTipoServicio.Location = new System.Drawing.Point(141, 189);
+            this.txtTipoServicio.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTipoServicio.Name = "txtTipoServicio";
+            this.txtTipoServicio.Size = new System.Drawing.Size(292, 20);
+            this.txtTipoServicio.TabIndex = 92;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(24, 277);
+            this.label14.Location = new System.Drawing.Point(24, 196);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(85, 13);
             this.label14.TabIndex = 88;
             this.label14.Text = "Tipo de servicio:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(24, 244);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 13);
-            this.label9.TabIndex = 86;
-            this.label9.Text = "Localidad:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(21, 219);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 13);
-            this.label13.TabIndex = 84;
-            this.label13.Text = "Provincia:";
             // 
             // txtDomicilio
             // 
@@ -324,23 +273,15 @@
             this.txtDomicilio.Size = new System.Drawing.Size(292, 20);
             this.txtDomicilio.TabIndex = 81;
             // 
-            // txtNumeroreferencia
-            // 
-            this.txtNumeroreferencia.Location = new System.Drawing.Point(141, 189);
-            this.txtNumeroreferencia.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNumeroreferencia.Name = "txtNumeroreferencia";
-            this.txtNumeroreferencia.Size = new System.Drawing.Size(292, 20);
-            this.txtNumeroreferencia.TabIndex = 79;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 195);
+            this.label3.Location = new System.Drawing.Point(24, 253);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 13);
+            this.label3.Size = new System.Drawing.Size(77, 13);
             this.label3.TabIndex = 78;
-            this.label3.Text = "Numero de referencia:";
+            this.label3.Text = "Nº de reclamo:";
             // 
             // txtObservacion
             // 
@@ -429,7 +370,6 @@
             this.dgvDetalleProcesoReclamo.AllowUserToAddRows = false;
             this.dgvDetalleProcesoReclamo.AllowUserToDeleteRows = false;
             this.dgvDetalleProcesoReclamo.AllowUserToOrderColumns = true;
-            this.dgvDetalleProcesoReclamo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvDetalleProcesoReclamo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvDetalleProcesoReclamo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalleProcesoReclamo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -439,11 +379,11 @@
             this.Column4,
             this.Column3,
             this.Column5});
-            this.dgvDetalleProcesoReclamo.Location = new System.Drawing.Point(334, 452);
+            this.dgvDetalleProcesoReclamo.Location = new System.Drawing.Point(324, 304);
             this.dgvDetalleProcesoReclamo.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDetalleProcesoReclamo.Name = "dgvDetalleProcesoReclamo";
             this.dgvDetalleProcesoReclamo.ReadOnly = true;
-            this.dgvDetalleProcesoReclamo.Size = new System.Drawing.Size(618, 192);
+            this.dgvDetalleProcesoReclamo.Size = new System.Drawing.Size(597, 242);
             this.dgvDetalleProcesoReclamo.TabIndex = 97;
             // 
             // Column1
@@ -487,68 +427,9 @@
             this.Column5.ReadOnly = true;
             this.Column5.Width = 101;
             // 
-            // pnlPreguntas
-            // 
-            this.pnlPreguntas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlPreguntas.Controls.Add(this.label5);
-            this.pnlPreguntas.Controls.Add(this.cbRespuesta);
-            this.pnlPreguntas.Controls.Add(this.btnCargarRespuesta);
-            this.pnlPreguntas.Controls.Add(this.label15);
-            this.pnlPreguntas.Controls.Add(this.cbPregunta);
-            this.pnlPreguntas.Location = new System.Drawing.Point(326, 336);
-            this.pnlPreguntas.Name = "pnlPreguntas";
-            this.pnlPreguntas.Size = new System.Drawing.Size(580, 109);
-            this.pnlPreguntas.TabIndex = 99;
-            this.pnlPreguntas.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 44);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Respuesta a operación:";
-            // 
-            // cbRespuesta
-            // 
-            this.cbRespuesta.FormattingEnabled = true;
-            this.cbRespuesta.Items.AddRange(new object[] {
-            "SI",
-            "NO"});
-            this.cbRespuesta.Location = new System.Drawing.Point(160, 41);
-            this.cbRespuesta.Name = "cbRespuesta";
-            this.cbRespuesta.Size = new System.Drawing.Size(368, 21);
-            this.cbRespuesta.TabIndex = 8;
-            // 
-            // btnCargarRespuesta
-            // 
-            this.btnCargarRespuesta.Location = new System.Drawing.Point(420, 68);
-            this.btnCargarRespuesta.Name = "btnCargarRespuesta";
-            this.btnCargarRespuesta.Size = new System.Drawing.Size(108, 23);
-            this.btnCargarRespuesta.TabIndex = 7;
-            this.btnCargarRespuesta.Text = "Cargar Respuesta";
-            this.btnCargarRespuesta.UseVisualStyleBackColor = true;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(26, 17);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(101, 13);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "Consulta operación:";
-            // 
-            // cbPregunta
-            // 
-            this.cbPregunta.FormattingEnabled = true;
-            this.cbPregunta.Location = new System.Drawing.Point(160, 14);
-            this.cbPregunta.Name = "cbPregunta";
-            this.cbPregunta.Size = new System.Drawing.Size(368, 21);
-            this.cbPregunta.TabIndex = 5;
-            // 
             // btnNuevo
             // 
+            this.btnNuevo.Enabled = false;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.Location = new System.Drawing.Point(19, 30);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
@@ -556,13 +437,14 @@
             this.btnNuevo.Size = new System.Drawing.Size(82, 57);
             this.btnNuevo.TabIndex = 26;
             this.btnNuevo.Text = "Nuevo Reclamo";
-            this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnAceptar
             // 
             this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
-            this.btnAceptar.Location = new System.Drawing.Point(84, 21);
+            this.btnAceptar.Location = new System.Drawing.Point(168, 21);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(105, 48);
@@ -574,7 +456,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(264, 21);
+            this.btnCancelar.Location = new System.Drawing.Point(348, 21);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(105, 48);
@@ -585,28 +467,26 @@
             // 
             // gbxConfirmaAccion
             // 
-            this.gbxConfirmaAccion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbxConfirmaAccion.Controls.Add(this.btnAceptar);
             this.gbxConfirmaAccion.Controls.Add(this.btnCancelar);
-            this.gbxConfirmaAccion.Location = new System.Drawing.Point(334, 652);
+            this.gbxConfirmaAccion.Location = new System.Drawing.Point(324, 554);
             this.gbxConfirmaAccion.Margin = new System.Windows.Forms.Padding(4);
             this.gbxConfirmaAccion.Name = "gbxConfirmaAccion";
             this.gbxConfirmaAccion.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxConfirmaAccion.Size = new System.Drawing.Size(399, 85);
+            this.gbxConfirmaAccion.Size = new System.Drawing.Size(589, 85);
             this.gbxConfirmaAccion.TabIndex = 96;
             this.gbxConfirmaAccion.TabStop = false;
             // 
             // gbxAcciones
             // 
-            this.gbxAcciones.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbxAcciones.Controls.Add(this.btnNuevo);
             this.gbxAcciones.Controls.Add(this.btnModificar);
             this.gbxAcciones.Controls.Add(this.btnVolver);
-            this.gbxAcciones.Location = new System.Drawing.Point(805, 13);
+            this.gbxAcciones.Location = new System.Drawing.Point(803, 13);
             this.gbxAcciones.Margin = new System.Windows.Forms.Padding(4);
             this.gbxAcciones.Name = "gbxAcciones";
             this.gbxAcciones.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxAcciones.Size = new System.Drawing.Size(123, 306);
+            this.gbxAcciones.Size = new System.Drawing.Size(118, 283);
             this.gbxAcciones.TabIndex = 95;
             this.gbxAcciones.TabStop = false;
             this.gbxAcciones.Text = "Acciones";
@@ -614,124 +494,106 @@
             // btnModificar
             // 
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.Location = new System.Drawing.Point(19, 121);
+            this.btnModificar.Location = new System.Drawing.Point(19, 114);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(82, 55);
             this.btnModificar.TabIndex = 21;
             this.btnModificar.Text = "Modificar Reclamo";
-            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Visible = false;
             // 
             // btnVolver
             // 
             this.btnVolver.Image = ((System.Drawing.Image)(resources.GetObject("btnVolver.Image")));
-            this.btnVolver.Location = new System.Drawing.Point(19, 235);
+            this.btnVolver.Location = new System.Drawing.Point(19, 206);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(82, 55);
             this.btnVolver.TabIndex = 29;
             this.btnVolver.Text = "Volver";
-            this.btnVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVolver.UseVisualStyleBackColor = true;
             // 
-            // pnlTipoReclamos
+            // txtBusNombre
             // 
-            this.pnlTipoReclamos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTipoReclamos.Controls.Add(this.label2);
-            this.pnlTipoReclamos.Controls.Add(this.cbBusProblematica);
-            this.pnlTipoReclamos.Controls.Add(this.button1);
-            this.pnlTipoReclamos.Controls.Add(this.cbTipoReclamo);
-            this.pnlTipoReclamos.Controls.Add(this.cbBusTipoReclamo);
-            this.pnlTipoReclamos.Location = new System.Drawing.Point(326, 326);
-            this.pnlTipoReclamos.Name = "pnlTipoReclamos";
-            this.pnlTipoReclamos.Size = new System.Drawing.Size(580, 109);
-            this.pnlTipoReclamos.TabIndex = 100;
-            this.pnlTipoReclamos.Visible = false;
+            this.txtBusNombre.Location = new System.Drawing.Point(113, 105);
+            this.txtBusNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBusNombre.Name = "txtBusNombre";
+            this.txtBusNombre.Size = new System.Drawing.Size(170, 20);
+            this.txtBusNombre.TabIndex = 56;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 44);
+            this.label2.Location = new System.Drawing.Point(65, 108);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Problemática del reclamo:";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 55;
+            this.label2.Text = "Nombre:";
             // 
-            // cbBusProblematica
+            // txtCorreo
             // 
-            this.cbBusProblematica.FormattingEnabled = true;
-            this.cbBusProblematica.Location = new System.Drawing.Point(160, 41);
-            this.cbBusProblematica.Name = "cbBusProblematica";
-            this.cbBusProblematica.Size = new System.Drawing.Size(387, 21);
-            this.cbBusProblematica.TabIndex = 8;
+            this.txtCorreo.Location = new System.Drawing.Point(141, 217);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(292, 20);
+            this.txtCorreo.TabIndex = 94;
             // 
-            // button1
+            // label5
             // 
-            this.button1.Location = new System.Drawing.Point(439, 68);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Iniciar solución";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(24, 224);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.TabIndex = 93;
+            this.label5.Text = "Correo:";
             // 
-            // cbTipoReclamo
+            // cbReferenciaReclamos
             // 
-            this.cbTipoReclamo.AutoSize = true;
-            this.cbTipoReclamo.Location = new System.Drawing.Point(26, 17);
-            this.cbTipoReclamo.Name = "cbTipoReclamo";
-            this.cbTipoReclamo.Size = new System.Drawing.Size(86, 13);
-            this.cbTipoReclamo.TabIndex = 6;
-            this.cbTipoReclamo.Text = "Tipo de reclamo:";
-            // 
-            // cbBusTipoReclamo
-            // 
-            this.cbBusTipoReclamo.FormattingEnabled = true;
-            this.cbBusTipoReclamo.Location = new System.Drawing.Point(160, 14);
-            this.cbBusTipoReclamo.Name = "cbBusTipoReclamo";
-            this.cbBusTipoReclamo.Size = new System.Drawing.Size(387, 21);
-            this.cbBusTipoReclamo.TabIndex = 5;
+            this.cbReferenciaReclamos.FormattingEnabled = true;
+            this.cbReferenciaReclamos.Location = new System.Drawing.Point(141, 245);
+            this.cbReferenciaReclamos.Name = "cbReferenciaReclamos";
+            this.cbReferenciaReclamos.Size = new System.Drawing.Size(292, 21);
+            this.cbReferenciaReclamos.TabIndex = 95;
             // 
             // ABMReclamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1298, 750);
-            this.Controls.Add(this.pnlTipoReclamos);
+            this.ClientSize = new System.Drawing.Size(937, 649);
             this.Controls.Add(this.gbxBuscador);
             this.Controls.Add(this.gbxDetalleCliente);
             this.Controls.Add(this.dgvDetalleProcesoReclamo);
-            this.Controls.Add(this.pnlPreguntas);
             this.Controls.Add(this.gbxConfirmaAccion);
             this.Controls.Add(this.gbxAcciones);
             this.Name = "ABMReclamos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABM Reclamos";
+            this.Load += new System.EventHandler(this.ABMReclamos_Load);
             this.gbxBuscador.ResumeLayout(false);
             this.gbxBuscador.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.gbxDetalleCliente.ResumeLayout(false);
             this.gbxDetalleCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleProcesoReclamo)).EndInit();
-            this.pnlPreguntas.ResumeLayout(false);
-            this.pnlPreguntas.PerformLayout();
             this.gbxConfirmaAccion.ResumeLayout(false);
             this.gbxAcciones.ResumeLayout(false);
-            this.pnlTipoReclamos.ResumeLayout(false);
-            this.pnlTipoReclamos.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtBusApellidoynombre;
+        private System.Windows.Forms.TextBox txtBusApellido;
         private System.Windows.Forms.TextBox txtBusDni;
         private System.Windows.Forms.GroupBox gbxBuscador;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvArticulos;
+        private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBusCodigo;
@@ -739,14 +601,9 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox gbxDetalleCliente;
-        private System.Windows.Forms.TextBox cbTipoServicio;
-        private System.Windows.Forms.TextBox cbLocalidades;
-        private System.Windows.Forms.TextBox cbProvincias;
+        private System.Windows.Forms.TextBox txtTipoServicio;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtDomicilio;
-        private System.Windows.Forms.TextBox txtNumeroreferencia;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtObservacion;
         private System.Windows.Forms.Label label4;
@@ -764,12 +621,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Panel pnlPreguntas;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cbRespuesta;
-        private System.Windows.Forms.Button btnCargarRespuesta;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox cbPregunta;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
@@ -777,11 +628,10 @@
         private System.Windows.Forms.GroupBox gbxAcciones;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.Panel pnlTipoReclamos;
+        private System.Windows.Forms.TextBox txtBusNombre;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbBusProblematica;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label cbTipoReclamo;
-        private System.Windows.Forms.ComboBox cbBusTipoReclamo;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbReferenciaReclamos;
     }
 }

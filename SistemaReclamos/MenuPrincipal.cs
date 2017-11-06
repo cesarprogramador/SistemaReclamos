@@ -33,5 +33,11 @@ namespace SistemaReclamos
         {
             Close();
         }
+
+        private void aBMReclamosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ABMReclamos _reclamo = new ABMReclamos();
+            _reclamo.Show();
+        }
     }
 }

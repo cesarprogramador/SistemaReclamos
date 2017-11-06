@@ -34,6 +34,7 @@
             this.aBMEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aBMClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aBMReclamosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +60,8 @@
             // 
             this.aBMToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aBMEmpleadosToolStripMenuItem,
-            this.aBMClientesToolStripMenuItem});
+            this.aBMClientesToolStripMenuItem,
+            this.aBMReclamosToolStripMenuItem});
             this.aBMToolStripMenuItem.Name = "aBMToolStripMenuItem";
             this.aBMToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.aBMToolStripMenuItem.Text = "ABM";
@@ -85,6 +87,13 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // aBMReclamosToolStripMenuItem
+            // 
+            this.aBMReclamosToolStripMenuItem.Name = "aBMReclamosToolStripMenuItem";
+            this.aBMReclamosToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.aBMReclamosToolStripMenuItem.Text = "ABM Reclamos";
+            this.aBMReclamosToolStripMenuItem.Click += new System.EventHandler(this.aBMReclamosToolStripMenuItem_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,5 +118,6 @@
         private System.Windows.Forms.ToolStripMenuItem aBMEmpleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aBMClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aBMReclamosToolStripMenuItem;
     }
 }
