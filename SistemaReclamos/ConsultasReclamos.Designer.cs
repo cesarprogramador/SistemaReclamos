@@ -35,11 +35,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbTipoReclamos = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtObservacion = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(270, 144);
+            this.btnAceptar.Location = new System.Drawing.Point(270, 214);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(68, 23);
             this.btnAceptar.TabIndex = 0;
@@ -106,11 +108,31 @@
             this.cbTipoReclamos.TabIndex = 6;
             this.cbTipoReclamos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbTipoReclamos_KeyPress);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 144);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Observación:";
+            // 
+            // txtObservacion
+            // 
+            this.txtObservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservacion.Location = new System.Drawing.Point(78, 141);
+            this.txtObservacion.Multiline = true;
+            this.txtObservacion.Name = "txtObservacion";
+            this.txtObservacion.Size = new System.Drawing.Size(260, 67);
+            this.txtObservacion.TabIndex = 8;
+            // 
             // ConsultasReclamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 176);
+            this.ClientSize = new System.Drawing.Size(350, 246);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtObservacion);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbTipoReclamos);
             this.Controls.Add(this.label2);
@@ -138,5 +160,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbTipoReclamos;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtObservacion;
     }
 }

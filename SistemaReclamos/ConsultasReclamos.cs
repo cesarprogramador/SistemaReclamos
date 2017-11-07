@@ -14,9 +14,16 @@ namespace SistemaReclamos
     public partial class ConsultasReclamos : Form
     {
         ClassReclamos _reclamos;
-        string _idproblematica;
-        DataSet _reclamocliente;
-
+        DataSet _ReclamoCliente;
+        public string _idreclamo = "0";
+        public string _numreferencia = "";
+        public string _idtiporeclamo = "0";
+        public string _tiporeclamo = "";
+        public string _idproblematica = "0";
+        public string _idcliente = "0";
+        public string _idempleado = "0";
+        public string _respuesta = "";
+        
         public ConsultasReclamos()
         {
             InitializeComponent();
@@ -26,33 +33,93 @@ namespace SistemaReclamos
         {
             this._reclamos = new ClassReclamos();
 
-            this._reclamos.idtiporeclamo = "0";
-            this._idproblematica = "0";
-
+            this._reclamos.reclamo = this._tiporeclamo;
+      
             DataTable _tiporeclamos = this._reclamos.BuscarTipoReclamos(this._reclamos);
 
             this.cbTipoReclamos.DataSource = _tiporeclamos;
             this.cbTipoReclamos.ValueMember = "idtiporeclamo";
             this.cbTipoReclamos.DisplayMember = "tiporeclamo";
+
+            if ((this._idproblematica != "0") && (this._respuesta != ""))
+            {
+                this._reclamos.idtiporeclamo = this._idtiporeclamo;
+                this._reclamos.idreclamo = this._idreclamo;
+                this._reclamos.idproblematicareclamo = this._idproblematica;
+                this._reclamos.respuesta = this._respuesta;
+
+                _ReclamoCliente = this._reclamos.BuscarSiguienteReclamos(this._reclamos, "Consulta");
+
+                if (this._ReclamoCliente.Tables["Consulta"].Rows.Count > 0)
+                {
+                    this.txtConsulta.Text = this._ReclamoCliente.Tables["Consulta"].Rows[0][1].ToString();
+                }
+            }
+
         }
 
         private void cbTipoReclamos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this._reclamos.idproblematicareclamo =this._idproblematica;
-            this._reclamos.idtiporeclamo = this.cbTipoReclamos.SelectedValue.ToString();
+            if (this._idtiporeclamo == "0")
+            {//Se carga reclamo solamente
+                this._reclamos.idtiporeclamo = this.cbTipoReclamos.SelectedValue.ToString();
+                this._reclamos.idproblematicareclamo = "0";
 
-            _reclamocliente = this._reclamos.BuscarSiguienteReclamos(this._reclamos, "Consulta");
+                _ReclamoCliente = this._reclamos.BuscarSiguienteReclamos(this._reclamos, "Consulta");
 
-            if (this._reclamocliente.Tables["Consulta"].Rows.Count > 0)
+                if (this._ReclamoCliente.Tables["Consulta"].Rows.Count > 0)
+                {
+                    this.txtConsulta.Text = this._ReclamoCliente.Tables["Consulta"].Rows[0][1].ToString();
+                }
+            }
+            else
             {
-                this.txtConsulta.Text = this._reclamocliente.Tables["Consulta"].Rows[0][1].ToString();
+                this._reclamos.idtiporeclamo = this._idtiporeclamo;
+                this._reclamos.idreclamo = this._idreclamo;
+                this._reclamos.idproblematicareclamo = this._idproblematica;
+                this._reclamos.respuesta = this._respuesta;
+     
+                _ReclamoCliente = this._reclamos.BuscarSiguienteReclamos(this._reclamos, "Consulta");
+
+                if (this._ReclamoCliente.Tables["Consulta"].Rows.Count > 0)
+                {
+                    this.txtConsulta.Text = this._ReclamoCliente.Tables["Consulta"].Rows[0][1].ToString();
+                }
             }
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            //Ingresar registro en base de datos de historial de reclamos
+            //Ingresar registro en tabla de reclamos
+            if (this.cbRespuesta.Text == "SI")
+            {
+                this._reclamos.idproblematicareclamo = this._ReclamoCliente.Tables["Consulta"].Rows[0][0].ToString();
+            }
+            else
+            {
+                this._reclamos.idproblematicareclamo = this._ReclamoCliente.Tables["Consulta"].Rows[0][0].ToString();
+            }
 
+            this._reclamos.idreclamo = this._idreclamo;
+            this._reclamos.numreferencia = this._numreferencia;
+            this._reclamos.idcliente = this._idcliente.ToString();
+            this._reclamos.idempleado = this._idempleado.ToString();
+            this._reclamos.fechaini = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss");
+            this._reclamos.fechafin = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss");
+            this._reclamos.respuesta = this.cbRespuesta.Text;
+            this._reclamos.observacion = this.txtObservacion.Text;
+
+            this._reclamos.accion = "I";
+            this._reclamos.fechaaccion = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss");
+
+            this._ReclamoCliente = this._reclamos.ABMReclamo(this._reclamos, "reclamo");
+
+            if (this._ReclamoCliente.Tables["reclamo"].Rows.Count > 0)
+            {
+                MessageBox.Show("Acción realizada con exito", "Atención!!!");
+
+                this.Close();
+            }
         }
     }
 }

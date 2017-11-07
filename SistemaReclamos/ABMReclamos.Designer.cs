@@ -32,6 +32,8 @@
             this.txtBusApellido = new System.Windows.Forms.TextBox();
             this.txtBusDni = new System.Windows.Forms.TextBox();
             this.gbxBuscador = new System.Windows.Forms.GroupBox();
+            this.txtBusNombre = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
@@ -42,6 +44,9 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.gbxDetalleCliente = new System.Windows.Forms.GroupBox();
+            this.cbReferenciaReclamos = new System.Windows.Forms.ComboBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtTipoServicio = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtDomicilio = new System.Windows.Forms.TextBox();
@@ -56,12 +61,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.dgvDetalleProcesoReclamo = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -69,11 +68,17 @@
             this.gbxAcciones = new System.Windows.Forms.GroupBox();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.txtBusNombre = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbReferenciaReclamos = new System.Windows.Forms.ComboBox();
+            this.txtFechaFin = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtFechaIni = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtTipoReclamo = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxBuscador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.gbxDetalleCliente.SuspendLayout();
@@ -119,6 +124,24 @@
             this.gbxBuscador.TabIndex = 94;
             this.gbxBuscador.TabStop = false;
             this.gbxBuscador.Text = "Buscador";
+            // 
+            // txtBusNombre
+            // 
+            this.txtBusNombre.Location = new System.Drawing.Point(113, 105);
+            this.txtBusNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBusNombre.Name = "txtBusNombre";
+            this.txtBusNombre.Size = new System.Drawing.Size(170, 20);
+            this.txtBusNombre.TabIndex = 56;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(65, 108);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 55;
+            this.label2.Text = "Nombre:";
             // 
             // label8
             // 
@@ -247,6 +270,32 @@
             this.gbxDetalleCliente.TabStop = false;
             this.gbxDetalleCliente.Text = "Clientes";
             // 
+            // cbReferenciaReclamos
+            // 
+            this.cbReferenciaReclamos.FormattingEnabled = true;
+            this.cbReferenciaReclamos.Location = new System.Drawing.Point(141, 245);
+            this.cbReferenciaReclamos.Name = "cbReferenciaReclamos";
+            this.cbReferenciaReclamos.Size = new System.Drawing.Size(292, 21);
+            this.cbReferenciaReclamos.TabIndex = 95;
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(141, 217);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(292, 20);
+            this.txtCorreo.TabIndex = 94;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(24, 224);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.TabIndex = 93;
+            this.label5.Text = "Correo:";
+            // 
             // txtTipoServicio
             // 
             this.txtTipoServicio.Location = new System.Drawing.Point(141, 189);
@@ -374,58 +423,16 @@
             this.dgvDetalleProcesoReclamo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalleProcesoReclamo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column6,
+            this.Column3,
             this.Column2,
             this.Column4,
-            this.Column3,
             this.Column5});
-            this.dgvDetalleProcesoReclamo.Location = new System.Drawing.Point(324, 304);
+            this.dgvDetalleProcesoReclamo.Location = new System.Drawing.Point(324, 388);
             this.dgvDetalleProcesoReclamo.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDetalleProcesoReclamo.Name = "dgvDetalleProcesoReclamo";
             this.dgvDetalleProcesoReclamo.ReadOnly = true;
-            this.dgvDetalleProcesoReclamo.Size = new System.Drawing.Size(597, 242);
+            this.dgvDetalleProcesoReclamo.Size = new System.Drawing.Size(597, 158);
             this.dgvDetalleProcesoReclamo.TabIndex = 97;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Fecha movimiento";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 108;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "idproblematica";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Proceso de reclamo";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 115;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Resp";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 57;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Observación";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 92;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Legajo asignado";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 101;
             // 
             // btnNuevo
             // 
@@ -516,55 +523,106 @@
             this.btnVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVolver.UseVisualStyleBackColor = true;
             // 
-            // txtBusNombre
+            // txtFechaFin
             // 
-            this.txtBusNombre.Location = new System.Drawing.Point(113, 105);
-            this.txtBusNombre.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBusNombre.Name = "txtBusNombre";
-            this.txtBusNombre.Size = new System.Drawing.Size(170, 20);
-            this.txtBusNombre.TabIndex = 56;
+            this.txtFechaFin.Location = new System.Drawing.Point(465, 360);
+            this.txtFechaFin.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFechaFin.Name = "txtFechaFin";
+            this.txtFechaFin.Size = new System.Drawing.Size(292, 20);
+            this.txtFechaFin.TabIndex = 103;
             // 
-            // label2
+            // label9
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(65, 108);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 55;
-            this.label2.Text = "Nombre:";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(344, 362);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 13);
+            this.label9.TabIndex = 102;
+            this.label9.Text = "Fecha fin reclamo:";
             // 
-            // txtCorreo
+            // txtFechaIni
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(141, 217);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(292, 20);
-            this.txtCorreo.TabIndex = 94;
+            this.txtFechaIni.Location = new System.Drawing.Point(465, 332);
+            this.txtFechaIni.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFechaIni.Name = "txtFechaIni";
+            this.txtFechaIni.Size = new System.Drawing.Size(292, 20);
+            this.txtFechaIni.TabIndex = 101;
             // 
-            // label5
+            // label13
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 224);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 13);
-            this.label5.TabIndex = 93;
-            this.label5.Text = "Correo:";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(344, 335);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(107, 13);
+            this.label13.TabIndex = 100;
+            this.label13.Text = "Fecha inicio reclamo:";
             // 
-            // cbReferenciaReclamos
+            // txtTipoReclamo
             // 
-            this.cbReferenciaReclamos.FormattingEnabled = true;
-            this.cbReferenciaReclamos.Location = new System.Drawing.Point(141, 245);
-            this.cbReferenciaReclamos.Name = "cbReferenciaReclamos";
-            this.cbReferenciaReclamos.Size = new System.Drawing.Size(292, 21);
-            this.cbReferenciaReclamos.TabIndex = 95;
+            this.txtTipoReclamo.Enabled = false;
+            this.txtTipoReclamo.Location = new System.Drawing.Point(465, 304);
+            this.txtTipoReclamo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTipoReclamo.Name = "txtTipoReclamo";
+            this.txtTipoReclamo.Size = new System.Drawing.Size(292, 20);
+            this.txtTipoReclamo.TabIndex = 99;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(344, 307);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(86, 13);
+            this.label15.TabIndex = 98;
+            this.label15.Text = "Tipo de reclamo:";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "idhistorial";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 75;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "idproblematica";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "problematica";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 92;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "respuesta";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 78;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "observación";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 90;
             // 
             // ABMReclamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(937, 649);
+            this.Controls.Add(this.txtFechaFin);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtFechaIni);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtTipoReclamo);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.gbxBuscador);
             this.Controls.Add(this.gbxDetalleCliente);
             this.Controls.Add(this.dgvDetalleProcesoReclamo);
@@ -583,6 +641,7 @@
             this.gbxConfirmaAccion.ResumeLayout(false);
             this.gbxAcciones.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -615,12 +674,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dgvDetalleProcesoReclamo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
@@ -633,5 +686,16 @@
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbReferenciaReclamos;
+        private System.Windows.Forms.TextBox txtFechaFin;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtFechaIni;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtTipoReclamo;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }
