@@ -561,7 +561,6 @@
             // 
             // txtTipoReclamo
             // 
-            this.txtTipoReclamo.Enabled = false;
             this.txtTipoReclamo.Location = new System.Drawing.Point(465, 304);
             this.txtTipoReclamo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTipoReclamo.Name = "txtTipoReclamo";
@@ -583,6 +582,7 @@
             this.Column1.HeaderText = "idhistorial";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
             this.Column1.Width = 75;
             // 
             // Column3
@@ -590,27 +590,28 @@
             this.Column3.HeaderText = "idproblematica";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "problematica";
+            this.Column2.HeaderText = "Problemáticas";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 92;
+            this.Column2.Width = 98;
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "respuesta";
+            this.Column4.HeaderText = "Respuestas";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 78;
+            this.Column4.Width = 88;
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "observación";
+            this.Column5.HeaderText = "Observaciones";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 90;
+            this.Column5.Width = 103;
             // 
             // ABMReclamos
             // 

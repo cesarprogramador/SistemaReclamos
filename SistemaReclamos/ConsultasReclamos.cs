@@ -34,7 +34,7 @@ namespace SistemaReclamos
             this._reclamos = new ClassReclamos();
 
             this._reclamos.reclamo = this._tiporeclamo;
-      
+
             DataTable _tiporeclamos = this._reclamos.BuscarTipoReclamos(this._reclamos);
 
             this.cbTipoReclamos.DataSource = _tiporeclamos;
@@ -56,6 +56,13 @@ namespace SistemaReclamos
                 }
             }
 
+            if (this._idproblematica == "1")
+            {
+                this.txtObservacion.Text = "Fin circuito!!!";
+                this.txtObservacion.Enabled = false;
+                this.cbRespuesta.Text = "SI";
+                this.cbRespuesta.Enabled = false;
+            }
         }
 
         private void cbTipoReclamos_KeyPress(object sender, KeyPressEventArgs e)
@@ -114,11 +121,20 @@ namespace SistemaReclamos
 
             this._ReclamoCliente = this._reclamos.ABMReclamo(this._reclamos, "reclamo");
 
-            if (this._ReclamoCliente.Tables["reclamo"].Rows.Count > 0)
+            if (this._reclamos.idproblematicareclamo.ToString() == "1")
             {
                 MessageBox.Show("Acción realizada con exito", "Atención!!!");
 
                 this.Close();
+            }
+            else
+            {
+                if (this._ReclamoCliente.Tables["reclamo"].Rows.Count > 0)
+                {
+                    MessageBox.Show("Acción realizada con exito", "Atención!!!");
+
+                    this.Close();
+                }
             }
         }
     }

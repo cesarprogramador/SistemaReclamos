@@ -124,6 +124,8 @@ namespace SistemaReclamos
 
                     MessageBox.Show("Se inicia circuito para dar solución a reclamo!!!");
 
+                    this.btnNuevo.Enabled = false;
+
                     this.CicloDeChequeo();
                 }
             }
@@ -143,7 +145,7 @@ namespace SistemaReclamos
                 _formreclamo._idcliente = this.dgvClientes[0, this.dgvClientes.CurrentCell.RowIndex].Value.ToString();
                 _formreclamo._idempleado = "1";
 
-                while (this.dgvDetalleProcesoReclamo[1, fil].Value.ToString() != "8")
+                while (this.dgvDetalleProcesoReclamo[1, fil].Value.ToString() != "1")
                 {
                     _formreclamo._tiporeclamo = this.txtTipoReclamo.Text;
                     _formreclamo._idproblematica = this.dgvDetalleProcesoReclamo[1, fil].Value.ToString();
