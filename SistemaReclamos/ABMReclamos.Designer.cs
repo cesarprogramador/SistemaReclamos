@@ -61,12 +61,14 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.dgvDetalleProcesoReclamo = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.gbxConfirmaAccion = new System.Windows.Forms.GroupBox();
             this.gbxAcciones = new System.Windows.Forms.GroupBox();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.txtFechaFin = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -74,16 +76,10 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtTipoReclamo = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxBuscador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.gbxDetalleCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleProcesoReclamo)).BeginInit();
-            this.gbxConfirmaAccion.SuspendLayout();
             this.gbxAcciones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -277,6 +273,7 @@
             this.cbReferenciaReclamos.Name = "cbReferenciaReclamos";
             this.cbReferenciaReclamos.Size = new System.Drawing.Size(292, 21);
             this.cbReferenciaReclamos.TabIndex = 95;
+            this.cbReferenciaReclamos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbReferenciaReclamos_KeyPress);
             // 
             // txtCorreo
             // 
@@ -431,8 +428,44 @@
             this.dgvDetalleProcesoReclamo.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDetalleProcesoReclamo.Name = "dgvDetalleProcesoReclamo";
             this.dgvDetalleProcesoReclamo.ReadOnly = true;
-            this.dgvDetalleProcesoReclamo.Size = new System.Drawing.Size(597, 158);
+            this.dgvDetalleProcesoReclamo.Size = new System.Drawing.Size(597, 235);
             this.dgvDetalleProcesoReclamo.TabIndex = 97;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "idhistorial";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            this.Column1.Width = 75;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "idproblematica";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Problemáticas";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 98;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Respuestas";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 88;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Observaciones";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 103;
             // 
             // btnNuevo
             // 
@@ -448,46 +481,10 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
-            this.btnAceptar.Location = new System.Drawing.Point(168, 21);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(105, 48);
-            this.btnAceptar.TabIndex = 30;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(348, 21);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(105, 48);
-            this.btnCancelar.TabIndex = 28;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // gbxConfirmaAccion
-            // 
-            this.gbxConfirmaAccion.Controls.Add(this.btnAceptar);
-            this.gbxConfirmaAccion.Controls.Add(this.btnCancelar);
-            this.gbxConfirmaAccion.Location = new System.Drawing.Point(324, 554);
-            this.gbxConfirmaAccion.Margin = new System.Windows.Forms.Padding(4);
-            this.gbxConfirmaAccion.Name = "gbxConfirmaAccion";
-            this.gbxConfirmaAccion.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxConfirmaAccion.Size = new System.Drawing.Size(589, 85);
-            this.gbxConfirmaAccion.TabIndex = 96;
-            this.gbxConfirmaAccion.TabStop = false;
-            // 
             // gbxAcciones
             // 
             this.gbxAcciones.Controls.Add(this.btnNuevo);
-            this.gbxAcciones.Controls.Add(this.btnModificar);
+            this.gbxAcciones.Controls.Add(this.btnEliminar);
             this.gbxAcciones.Controls.Add(this.btnVolver);
             this.gbxAcciones.Location = new System.Drawing.Point(803, 13);
             this.gbxAcciones.Margin = new System.Windows.Forms.Padding(4);
@@ -498,18 +495,18 @@
             this.gbxAcciones.TabStop = false;
             this.gbxAcciones.Text = "Acciones";
             // 
-            // btnModificar
+            // btnEliminar
             // 
-            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.Location = new System.Drawing.Point(19, 114);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(82, 55);
-            this.btnModificar.TabIndex = 21;
-            this.btnModificar.Text = "Modificar Reclamo";
-            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Visible = false;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.Location = new System.Drawing.Point(19, 114);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(82, 55);
+            this.btnEliminar.TabIndex = 21;
+            this.btnEliminar.Text = "Eliminar Reclamo";
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnVolver
             // 
@@ -522,6 +519,7 @@
             this.btnVolver.Text = "Volver";
             this.btnVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // txtFechaFin
             // 
@@ -577,42 +575,6 @@
             this.label15.TabIndex = 98;
             this.label15.Text = "Tipo de reclamo:";
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "idhistorial";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            this.Column1.Width = 75;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "idproblematica";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Problemáticas";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 98;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Respuestas";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 88;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Observaciones";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 103;
-            // 
             // ABMReclamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -627,7 +589,6 @@
             this.Controls.Add(this.gbxBuscador);
             this.Controls.Add(this.gbxDetalleCliente);
             this.Controls.Add(this.dgvDetalleProcesoReclamo);
-            this.Controls.Add(this.gbxConfirmaAccion);
             this.Controls.Add(this.gbxAcciones);
             this.Name = "ABMReclamos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -639,7 +600,6 @@
             this.gbxDetalleCliente.ResumeLayout(false);
             this.gbxDetalleCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleProcesoReclamo)).EndInit();
-            this.gbxConfirmaAccion.ResumeLayout(false);
             this.gbxAcciones.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -676,11 +636,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dgvDetalleProcesoReclamo;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.GroupBox gbxConfirmaAccion;
         private System.Windows.Forms.GroupBox gbxAcciones;
-        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.TextBox txtBusNombre;
         private System.Windows.Forms.Label label2;

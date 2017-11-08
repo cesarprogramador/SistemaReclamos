@@ -38,9 +38,9 @@ namespace SistemaReclamos.personas
         public string fechaaccion { get; set; }
         public string sql { get; set; }
 
-        public DataSet LoginPersona(string _usu, string _pass, string _tabla)
+        public DataSet LoginPersona(ClassPersonas _usuario,String _tabla)
         {
-            sql = "CALL sp_login('" + _usu + "','" + _pass + "');";
+            sql = "CALL sp_login('" + _usuario.usuario + "','" + _usuario.pass + "');";
 
             return this.RealizarAccion(sql, _tabla);
         }
@@ -55,7 +55,7 @@ namespace SistemaReclamos.personas
         public DataSet ABMPersona(ClassPersonas _persona, string _tabla)
         {
 
-            sql = "CALL sp_abmpersona(" + _persona.idpersona + ",'" + _persona.apellido + "','" + _persona.nombre + "','" + _persona.dni + "','" + _persona.cel + "','" + _persona.tel + "','" + _persona.correo + "','" + _persona.calle + "','" + _persona.numero + "','" + _persona.piso + "','" + _persona.dpto + "'," + _persona.idtiposervicio + ",'" + _persona.numreferencia + "','" + _persona.observacion + "'," + _persona.idtipopersona + ",'" + _persona.accion + "','" + _persona.fechaaccion + "');";
+            sql = "CALL sp_abmpersona(" + _persona.idpersona + ",'" + _persona.apellido + "','" + _persona.nombre + "','" + _persona.dni + "','" + _persona.cel + "','" + _persona.tel + "','" + _persona.correo + "','" + _persona.calle + "','" + _persona.numero + "','" + _persona.piso + "','" + _persona.dpto + "'," + _persona.idtiposervicio + ",'" + _persona.numreferencia + "','" + _persona.observacion + "','" + _persona.usuario + "','" + _persona.pass + "'," + _persona.idtipopersona + ",'" + _persona.accion + "','" + _persona.fechaaccion + "');";
 
             return this.RealizarAccion(sql, _tabla);
         }

@@ -29,15 +29,22 @@ namespace SistemaReclamos
             _cliente.Show();
         }
 
-        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void aBMReclamosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ABMReclamos _reclamo = new ABMReclamos();
             _reclamo.Show();
+        }
+
+        private void salirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+            FormLogin _login = new FormLogin();
+
+            _login.ShowDialog();
         }
     }
 }

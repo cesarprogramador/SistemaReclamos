@@ -31,6 +31,8 @@
             this.cbxEliminado = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gbxBuscador = new System.Windows.Forms.GroupBox();
+            this.cbBusTipoEmpleado = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtBusNombre = new System.Windows.Forms.TextBox();
             this.txtBusApellido = new System.Windows.Forms.TextBox();
@@ -77,8 +79,10 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.cbBusTipoEmpleado = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.gbxBuscador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.gbxConfirmarAccion.SuspendLayout();
@@ -125,6 +129,23 @@
             this.gbxBuscador.TabIndex = 16;
             this.gbxBuscador.TabStop = false;
             this.gbxBuscador.Text = "Buscador";
+            // 
+            // cbBusTipoEmpleado
+            // 
+            this.cbBusTipoEmpleado.FormattingEnabled = true;
+            this.cbBusTipoEmpleado.Location = new System.Drawing.Point(100, 19);
+            this.cbBusTipoEmpleado.Name = "cbBusTipoEmpleado";
+            this.cbBusTipoEmpleado.Size = new System.Drawing.Size(191, 21);
+            this.cbBusTipoEmpleado.TabIndex = 48;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 13);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "Tipo de empleado:";
             // 
             // label13
             // 
@@ -383,6 +404,10 @@
             // 
             // gbxDetalle
             // 
+            this.gbxDetalle.Controls.Add(this.txtPass);
+            this.gbxDetalle.Controls.Add(this.label5);
+            this.gbxDetalle.Controls.Add(this.txtUsuario);
+            this.gbxDetalle.Controls.Add(this.label10);
             this.gbxDetalle.Controls.Add(this.txtFechaEgreso);
             this.gbxDetalle.Controls.Add(this.label7);
             this.gbxDetalle.Controls.Add(this.txtFechaIngreso);
@@ -585,22 +610,37 @@
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // cbBusTipoEmpleado
+            // txtPass
             // 
-            this.cbBusTipoEmpleado.FormattingEnabled = true;
-            this.cbBusTipoEmpleado.Location = new System.Drawing.Point(100, 19);
-            this.cbBusTipoEmpleado.Name = "cbBusTipoEmpleado";
-            this.cbBusTipoEmpleado.Size = new System.Drawing.Size(191, 21);
-            this.cbBusTipoEmpleado.TabIndex = 48;
+            this.txtPass.Location = new System.Drawing.Point(109, 472);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(191, 20);
+            this.txtPass.TabIndex = 54;
             // 
-            // label2
+            // label5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 13);
-            this.label2.TabIndex = 47;
-            this.label2.Text = "Tipo de empleado:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(43, 475);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 13);
+            this.label5.TabIndex = 53;
+            this.label5.Text = "Contraseña:";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(109, 442);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(191, 20);
+            this.txtUsuario.TabIndex = 52;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(61, 445);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 13);
+            this.label10.TabIndex = 51;
+            this.label10.Text = "Usuario:";
             // 
             // ABMEmpleados
             // 
@@ -679,5 +719,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbBusTipoEmpleado;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Label label10;
     }
 }

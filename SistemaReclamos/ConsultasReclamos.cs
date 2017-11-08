@@ -116,7 +116,7 @@ namespace SistemaReclamos
             this._reclamos.respuesta = this.cbRespuesta.Text;
             this._reclamos.observacion = this.txtObservacion.Text;
 
-            this._reclamos.accion = "I";
+            this._reclamos.accion = "N";
             this._reclamos.fechaaccion = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss");
 
             this._ReclamoCliente = this._reclamos.ABMReclamo(this._reclamos, "reclamo");

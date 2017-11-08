@@ -116,6 +116,8 @@ namespace SistemaReclamos
             this._empleados.observacion = this.txtObservacion.Text;
             this._empleados.idtiposervicio = "1";
             this._empleados.numreferencia = "";
+            this._empleados.usuario = this.txtUsuario.Text;
+            this._empleados.pass = this.txtPass.Text;
 
             if (this.bandera == "N")
             {
@@ -206,6 +208,9 @@ namespace SistemaReclamos
                     {
                         this.txtFechaEgreso.Text = "";
                     }
+
+                    this.txtUsuario.Text = this._empleado.Tables["Empleado"].Rows[0][14].ToString();
+                    this.txtPass.Text = this._empleado.Tables["Empleado"].Rows[0][15].ToString();
                 }
 
                 this.gbxAcciones.Enabled = true;

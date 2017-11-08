@@ -11,3 +11,4 @@ D:\Fenix\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\o
 D:\Fenix\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.exe
 D:\Fenix\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.pdb
 D:\Fenix\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.csprojResolveAssemblyReference.cache
+D:\Fenix\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.FormLogin.resources

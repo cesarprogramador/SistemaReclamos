@@ -16,7 +16,7 @@ namespace SistemaReclamos
     {
         ClassPersonas _clientes;
         DataSet _cliente;
-        ClassReclamos _reclamo;
+        ClassReclamos _reclamos;
         DataSet _historial;
         string bandera;
 
@@ -73,13 +73,35 @@ namespace SistemaReclamos
                     this.txtTipoServicio.Text = this._cliente.Tables["Cliente"].Rows[0][10].ToString();
                     this.txtCorreo.Text = this._cliente.Tables["Cliente"].Rows[0][5].ToString();
 
-                    this.btnNuevo.Enabled = true;
+                    this.ListarNumerosReclamos();
+
+                    this.txtTipoReclamo.Text = "";
+                    this.txtFechaIni.Text = "";
+                    this.txtFechaFin.Text = "";
+                    this.dgvDetalleProcesoReclamo.Rows.Clear();
                 }
 
                 this.gbxAcciones.Enabled = true;
                 this.btnNuevo.Enabled = true;
-                this.btnModificar.Enabled = true;
             }
+        }
+
+        private void ListarNumerosReclamos()
+        {
+            //Recuperar listado de reclamos asociados al cliente
+            this.cbReferenciaReclamos.DataSource = null;
+
+            this._reclamos = new ClassReclamos();
+
+            this._reclamos.idcliente = this._clientes.idpersona;
+
+            DataTable _listanumreferecnias = this._reclamos.BuscarNumReferenciasDeReclamos(this._reclamos);
+
+            this.cbReferenciaReclamos.DataSource = _listanumreferecnias;
+            this.cbReferenciaReclamos.ValueMember = "idreclamo";
+            this.cbReferenciaReclamos.DisplayMember = "numeroreferencia";
+
+            this.btnEliminar.Enabled = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -97,37 +119,15 @@ namespace SistemaReclamos
 
             _formreclamo.ShowDialog();
 
-            if (this.cbReferenciaReclamos.Text.Length > 0)
+            this.PoblarTablaHistorialReclamos();
+
+            if (this.dgvDetalleProcesoReclamo.Rows.Count > 0)
             {
-                this._reclamo = new ClassReclamos();
+                MessageBox.Show("Se inicia circuito para dar solución a reclamo!!!");
 
-                this._reclamo.numreferencia = this.cbReferenciaReclamos.Text;
+                this.btnNuevo.Enabled = false;
 
-                this._historial = this._reclamo.BuscarHistorialReclamos(this._reclamo, "Historial");
-
-                if (this._historial.Tables["Historial"].Rows.Count > 0)
-                { 
-                    this.txtTipoReclamo.Text = this._historial.Tables["Historial"].Rows[0][1].ToString();
-                    this.txtFechaIni.Text = this._historial.Tables["Historial"].Rows[0][2].ToString();
-                    this.txtFechaFin.Text = this._historial.Tables["Historial"].Rows[0][3].ToString();
-                  
-                    for (int fil = 0; fil < this._historial.Tables["Historial"].Rows.Count; fil++)
-                    {
-                        this.dgvDetalleProcesoReclamo.Rows.Add(1);
-
-                        this.dgvDetalleProcesoReclamo[0, fil].Value = this._historial.Tables["Historial"].Rows[fil][4].ToString();
-                        this.dgvDetalleProcesoReclamo[1, fil].Value = this._historial.Tables["Historial"].Rows[fil][5].ToString();
-                        this.dgvDetalleProcesoReclamo[2, fil].Value = this._historial.Tables["Historial"].Rows[fil][6].ToString();
-                        this.dgvDetalleProcesoReclamo[3, fil].Value = this._historial.Tables["Historial"].Rows[fil][7].ToString();
-                        this.dgvDetalleProcesoReclamo[4, fil].Value = this._historial.Tables["Historial"].Rows[fil][8].ToString();
-                    }
-
-                    MessageBox.Show("Se inicia circuito para dar solución a reclamo!!!");
-
-                    this.btnNuevo.Enabled = false;
-
-                    this.CicloDeChequeo();
-                }
+                this.CicloDeChequeo();
             }
         }
 
@@ -153,33 +153,106 @@ namespace SistemaReclamos
 
                     _formreclamo.ShowDialog();
 
-                    //Cargo nueva consulta y resultado
-                    this._historial = this._reclamo.BuscarHistorialReclamos(this._reclamo, "Historial");
-
-                    if (this._historial.Tables["Historial"].Rows.Count > 0)
-                    {
-                        this._reclamo.idtiporeclamo = this._historial.Tables["Historial"].Rows[0][1].ToString(); ;
-
-                        this.txtTipoReclamo.Text = this._historial.Tables["Historial"].Rows[0][1].ToString();
-                        this.txtFechaIni.Text = this._historial.Tables["Historial"].Rows[0][2].ToString();
-                        this.txtFechaFin.Text = this._historial.Tables["Historial"].Rows[0][3].ToString();
-
-                        this.dgvDetalleProcesoReclamo.Rows.Clear();
-
-                        for (fil=0; fil < this._historial.Tables["Historial"].Rows.Count; fil++)
-                        {
-                            this.dgvDetalleProcesoReclamo.Rows.Add(1);
-
-                            this.dgvDetalleProcesoReclamo[0, fil].Value = this._historial.Tables["Historial"].Rows[fil][4].ToString();
-                            this.dgvDetalleProcesoReclamo[1, fil].Value = this._historial.Tables["Historial"].Rows[fil][5].ToString();
-                            this.dgvDetalleProcesoReclamo[2, fil].Value = this._historial.Tables["Historial"].Rows[fil][6].ToString();
-                            this.dgvDetalleProcesoReclamo[3, fil].Value = this._historial.Tables["Historial"].Rows[fil][7].ToString();
-                            this.dgvDetalleProcesoReclamo[4, fil].Value = this._historial.Tables["Historial"].Rows[fil][8].ToString();
-                        }
-                    }
+                    this.PoblarTablaHistorialReclamos();
 
                     fil = this.dgvDetalleProcesoReclamo.Rows.Count - 1;
                 }
+
+                if (this.dgvDetalleProcesoReclamo[1, fil].Value.ToString() == "1")
+                {
+                    this.cbReferenciaReclamos.Enabled = true;
+
+                    this.ListarNumerosReclamos();
+                }
+            }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void PoblarTablaHistorialReclamos()
+        {
+            this.dgvDetalleProcesoReclamo.Rows.Clear();
+
+            if (this.cbReferenciaReclamos.Text.Length > 0)
+            {
+                this._reclamos = new ClassReclamos();
+
+                this._reclamos.numreferencia = this.cbReferenciaReclamos.Text;
+
+                this._historial = this._reclamos.BuscarHistorialReclamos(this._reclamos, "Historial");
+
+                if (this._historial.Tables["Historial"].Rows.Count > 0)
+                {
+                    this.txtTipoReclamo.Text = this._historial.Tables["Historial"].Rows[0][1].ToString();
+                    this.txtFechaIni.Text = this._historial.Tables["Historial"].Rows[0][2].ToString();
+                    this.txtFechaFin.Text = this._historial.Tables["Historial"].Rows[0][3].ToString();
+
+                    for (int fil = 0; fil < this._historial.Tables["Historial"].Rows.Count; fil++)
+                    {
+                        this.dgvDetalleProcesoReclamo.Rows.Add(1);
+
+                        this.dgvDetalleProcesoReclamo[0, fil].Value = this._historial.Tables["Historial"].Rows[fil][4].ToString();
+                        this.dgvDetalleProcesoReclamo[1, fil].Value = this._historial.Tables["Historial"].Rows[fil][5].ToString();
+                        this.dgvDetalleProcesoReclamo[2, fil].Value = this._historial.Tables["Historial"].Rows[fil][6].ToString();
+                        this.dgvDetalleProcesoReclamo[3, fil].Value = this._historial.Tables["Historial"].Rows[fil][7].ToString();
+                        this.dgvDetalleProcesoReclamo[4, fil].Value = this._historial.Tables["Historial"].Rows[fil][8].ToString();
+                    }
+                }
+            }
+        }
+
+        private void cbReferenciaReclamos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.PoblarTablaHistorialReclamos();
+
+            if (this.dgvDetalleProcesoReclamo.Rows.Count > 0)
+            {
+                this.btnEliminar.Enabled = true;
+            }
+            else
+            {
+                this.btnEliminar.Enabled = false;
+                MessageBox.Show("No existe número de referencia de reclamo!!!","Atención");
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            this._reclamos = new ClassReclamos();
+
+            this._reclamos.idreclamo = this.cbReferenciaReclamos.SelectedValue.ToString();
+            this._reclamos.idproblematicareclamo = "2";
+            this._reclamos.numreferencia = "";
+            this._reclamos.idcliente = "0";
+            this._reclamos.idtiporeclamo = "0";
+            this._reclamos.idempleado = "0";
+            this._reclamos.fechaini = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss");
+            this._reclamos.fechafin = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss");
+            this._reclamos.respuesta = "";
+            this._reclamos.observacion = "";
+
+            this._reclamos.accion = "B";
+            this._reclamos.fechaaccion = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss");
+
+            this._historial = this._reclamos.ABMReclamo(this._reclamos, "reclamo");
+
+            if (this._historial.Tables["reclamo"].Rows.Count>0)
+            {
+                MessageBox.Show("Acción realizada con exito", "Atención!!!");
+
+                this.ListarNumerosReclamos();
+
+                this.txtTipoReclamo.Text = "";
+                this.txtFechaIni.Text = "";
+                this.txtFechaFin.Text = "";
+                this.dgvDetalleProcesoReclamo.Rows.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Error en la eliminación del registro", "Atención!!!");
             }
         }
     }

@@ -26,26 +26,7 @@ namespace SistemaReclamos.reclamos
         public string fechafin { get; set; }
         public string respuesta { get; set; }
         public string observacion { get; set; }
-        /*public string idreclamo { get; set; }
-                public string reclamo { get; set; }
-                public string nombre { get; set; }
-                public string dni { get; set; }
-                public string cel { get; set; }
-                public string tel { get; set; }
-                public string correo { get; set; }
-                public string calle { get; set; }
-                public string numero { get; set; }
-                public string piso { get; set; }
-                public string dpto { get; set; }
-                public string idtiposervicio { get; set; }
-                public string tiposervicio { get; set; }
-                public string numreferencia { get; set; }
-                public string observacion { get; set; }
-                public string usuario { get; set; }
-                public string pass { get; set; }
-                public string fechaingreso { get; set; }
-                public string fechaegreso { get; set; }
-                */
+      
         public string accion { get; set; }
         public string fechaaccion { get; set; }
         public string sql { get; set; }
@@ -98,6 +79,13 @@ namespace SistemaReclamos.reclamos
             sql = "CALL listarhistorialreclamos('" + _reclamo.numreferencia + "',0,100);";
 
             return this.RealizarAccion(sql, _tabla);
+        }
+
+        public DataTable BuscarNumReferenciasDeReclamos(ClassReclamos _listarnumreclamos)
+        {
+            sql = "CALL listarnumreferenciasdereclamos('" + _listarnumreclamos.idcliente + "',0,100);";
+
+            return this.RealizarAccion(sql);
         }
 
         /*
