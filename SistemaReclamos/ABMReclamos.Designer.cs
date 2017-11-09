@@ -76,6 +76,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtTipoReclamo = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtObservacionCierre = new System.Windows.Forms.TextBox();
             this.gbxBuscador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.gbxDetalleCliente.SuspendLayout();
@@ -428,7 +430,7 @@
             this.dgvDetalleProcesoReclamo.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDetalleProcesoReclamo.Name = "dgvDetalleProcesoReclamo";
             this.dgvDetalleProcesoReclamo.ReadOnly = true;
-            this.dgvDetalleProcesoReclamo.Size = new System.Drawing.Size(597, 235);
+            this.dgvDetalleProcesoReclamo.Size = new System.Drawing.Size(597, 173);
             this.dgvDetalleProcesoReclamo.TabIndex = 97;
             // 
             // Column1
@@ -575,11 +577,30 @@
             this.label15.TabIndex = 98;
             this.label15.Text = "Tipo de reclamo:";
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(334, 580);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(117, 13);
+            this.label16.TabIndex = 105;
+            this.label16.Text = "Observación por cierre:";
+            // 
+            // txtObservacionCierre
+            // 
+            this.txtObservacionCierre.Location = new System.Drawing.Point(465, 577);
+            this.txtObservacionCierre.Multiline = true;
+            this.txtObservacionCierre.Name = "txtObservacionCierre";
+            this.txtObservacionCierre.Size = new System.Drawing.Size(456, 46);
+            this.txtObservacionCierre.TabIndex = 104;
+            // 
             // ABMReclamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(937, 649);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.txtObservacionCierre);
             this.Controls.Add(this.txtFechaFin);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtFechaIni);
@@ -655,5 +676,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtObservacionCierre;
     }
 }

@@ -18,7 +18,7 @@ namespace SistemaReclamos
         DataSet _cliente;
         ClassReclamos _reclamos;
         DataSet _historial;
-        string bandera;
+        public string _idempleadosession;
 
         public ABMReclamos()
         {
@@ -115,7 +115,7 @@ namespace SistemaReclamos
             _formreclamo._idtiporeclamo = "0";
             _formreclamo._idproblematica = "0";
             _formreclamo._idcliente = this.dgvClientes[0, this.dgvClientes.CurrentCell.RowIndex].Value.ToString();
-            _formreclamo._idempleado = "1";
+            _formreclamo._idempleado = this._idempleadosession;
 
             _formreclamo.ShowDialog();
 
@@ -210,7 +210,17 @@ namespace SistemaReclamos
 
             if (this.dgvDetalleProcesoReclamo.Rows.Count > 0)
             {
-                this.btnEliminar.Enabled = true;
+                if (this.txtFechaFin.Text.Length > 0)
+                {
+                    this.btnEliminar.Enabled = false;
+                    this.btnNuevo.Enabled = false;
+                    this.txtObservacionCierre.Text = this._historial.Tables["Historial"].Rows[0][10].ToString();
+                }
+                else
+                {
+                    this.btnEliminar.Enabled = true;
+                    this.btnNuevo.Enabled = true;
+                }
             }
             else
             {

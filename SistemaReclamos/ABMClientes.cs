@@ -16,7 +16,7 @@ namespace SistemaReclamos
         ClassPersonas _clientes;
         DataSet _cliente;
         string bandera;
-
+      
         public ABMClientes()
         {
             InitializeComponent();
@@ -155,7 +155,6 @@ namespace SistemaReclamos
             this._clientes.fechaingreso = DateTime.Now.ToString("yyyy/MM/dd");
             this._clientes.fechaegreso = DateTime.Now.ToString("yyyy/MM/dd");
            
-            this._clientes.idtipopersona = "2";
             this._clientes.accion = this.bandera;
             this._clientes.fechaaccion = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss");
             

@@ -13,10 +13,13 @@ namespace SistemaReclamos
 {
     public partial class FormLogin : Form
     {
-        ClassPersonas _empleados;
-        DataSet _empleado;
-        string idempleado;
-
+        DataSet _emp;
+        ClassPersonas _login;
+        public string idpersona = "0";
+        public string apellido = "";
+        public string nombre = "";
+        public string tipopersona = "";
+       
         public FormLogin()
         {
             InitializeComponent();
@@ -54,19 +57,36 @@ namespace SistemaReclamos
 
         private void ValidadUsuario()
         {
-            this._empleados = new ClassPersonas();
+            if ((this.txtUsu.Text.Length > 0) && (this.txtPass.Text.Length > 0))
+            {
+                this._login = new ClassPersonas();
 
-            this._empleados.usuario = this.txtUsu.Text;
-            this._empleados.pass = this.txtPass.Text;
+                this._emp = new DataSet();
 
-            DataSet _empleado = this._empleados.LoginPersona(this._empleados, "login");
+                this._login.usuario=this.txtUsu.Text;
+                this._login.pass=this.txtPass.Text;
 
+                this._emp = this._login.LoginPersona(this._login , "Login");
 
-        }
+                if (this._emp.Tables["Login"].Rows.Count > 0)
+                {
+                    this.idpersona = this._emp.Tables["Login"].Rows[0][0].ToString();
+                    this.apellido = this._emp.Tables["Login"].Rows[0][1].ToString();
+                    this.nombre = this._emp.Tables["Login"].Rows[0][2].ToString();
+                    this.tipopersona = this._emp.Tables["Login"].Rows[0][3].ToString();
+               
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Los datos no se corresponde con ningún usuario!!!");
+                }
+            }
+      }
 
         private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            if (this.idpersona == "0") Application.Exit();
         }
     }
 }

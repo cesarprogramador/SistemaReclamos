@@ -83,61 +83,30 @@ namespace SistemaReclamos.reclamos
 
         public DataTable BuscarNumReferenciasDeReclamos(ClassReclamos _listarnumreclamos)
         {
-            sql = "CALL listarnumreferenciasdereclamos('" + _listarnumreclamos.idcliente + "',0,100);";
+            sql = "CALL listarnumreferenciasdereclamos(" + _listarnumreclamos.idcliente + ",0,100);";
 
             return this.RealizarAccion(sql);
         }
 
-        /*
-                public DataSet LoginPersona(string _usu, string _pass, string _tabla)
-                {
-                    sql = "CALL sp_login('" + _usu + "','" + _pass + "');";
+        public DataSet BuscarReclamosPorEmpleados(ClassReclamos _reclamo, string _tabla)
+        {
+            sql = "CALL listarreclamosporempleados(" + _reclamo.idempleado + ",0,100);";
 
-                    return this.RealizarAccion(sql, _tabla);
-                }
+            return this.RealizarAccion(sql, _tabla);
+        }
 
-                public DataSet BuscarPersonaClientes(ClassPersonas _cliente, string _tabla)
-                {
-                    sql = "CALL sp_buscadorclientes('" + _cliente.idpersona + "','" + _cliente.apellido + "','" + _cliente.nombre + "','" + _cliente.dni + "','" + _cliente.accion + "',0,100);";
+        public DataSet BuscarReclamosPorReferencia(ClassReclamos _listarnumreclamos,string _tabla)
+        {
+            sql = "CALL listarreclamosporeferencia('" + _listarnumreclamos.numreferencia + "',0,100);";
 
-                    return this.RealizarAccion(sql, _tabla);
-                }
+            return this.RealizarAccion(sql,_tabla);
+        }
 
-                public DataSet ABMPersona(ClassPersonas _persona, string _tabla)
-                {
+        public DataSet CierreReclamo(ClassReclamos _reclamo, string _tabla)
+        {
+            sql = "CALL sp_cerrarreclamo(" + _reclamo.idreclamo + ",'" + _reclamo.fechafin + "','" + _reclamo.observacion + "','" + _reclamo.accion + "','" + _reclamo.fechaaccion + "');";
 
-                    sql = "CALL sp_abmpersona(" + _persona.idpersona + ",'" + _persona.apellido + "','" + _persona.nombre + "','" + _persona.dni + "','" + _persona.cel + "','" + _persona.tel + "','" + _persona.correo + "','" + _persona.calle + "','" + _persona.numero + "','" + _persona.piso + "','" + _persona.dpto + "'," + _persona.idtiposervicio + ",'" + _persona.numreferencia + "','" + _persona.observacion + "'," + _persona.idtipopersona + ",'" + _persona.accion + "','" + _persona.fechaaccion + "');";
-
-                    return this.RealizarAccion(sql, _tabla);
-                }
-
-                private DataSet RealizarAccion(string _sql, string _tabla)
-                {
-                    ClassConexion _cnx = new ClassConexion();
-
-                    DataSet _resp = new DataSet();
-
-                    _resp = _cnx.AcccionSobreBaseDatos(sql, _tabla);
-
-                    return _resp;
-                }
-
-        
-                public DataTable BuscarTipoPersonas(ClassPersonas _tipopersona)
-                {
-                    sql = "CALL sp_buscadortipopersonas(" + _tipopersona.idtipopersona + ",'" + _tipopersona.tipopersona + "',0,100);";
-
-                    return this.RealizarAccion(sql);
-                }
-
-               
-
-                public DataSet BuscarPersonaEmpleados(ClassPersonas _empleado, string _tabla)
-                {
-                    sql = "CALL sp_buscadorempleados(" + _empleado.idpersona + ",'" + _empleado.apellido + "','" + _empleado.nombre + "','" + _empleado.dni + "'," + _empleado.idtipopersona + ",'" + _empleado.accion + "',0,100);";
-
-                    return this.RealizarAccion(sql, _tabla);
-                }
-                */
+            return this.RealizarAccion(sql, _tabla);
+        }
     }
 }

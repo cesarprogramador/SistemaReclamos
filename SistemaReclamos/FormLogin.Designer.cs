@@ -32,7 +32,6 @@
             this.txtUsu = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -56,6 +55,7 @@
             // 
             this.txtPass.Location = new System.Drawing.Point(124, 66);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(180, 20);
             this.txtPass.TabIndex = 3;
             this.txtPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPass_KeyPress);
@@ -69,21 +69,11 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Pasword:";
             // 
-            // lblError
-            // 
-            this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(121, 100);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(16, 13);
-            this.lblError.TabIndex = 4;
-            this.lblError.Text = "...";
-            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 137);
-            this.Controls.Add(this.lblError);
+            this.ClientSize = new System.Drawing.Size(360, 126);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtUsu);
@@ -105,6 +95,5 @@
         private System.Windows.Forms.TextBox txtUsu;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblError;
     }
 }

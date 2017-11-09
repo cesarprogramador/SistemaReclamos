@@ -16,7 +16,7 @@ namespace SistemaReclamos
         ClassPersonas _empleados;
         DataSet _empleado;
         string bandera;
-
+       
         public ABMEmpleados()
         {
             InitializeComponent();

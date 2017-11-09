@@ -146,9 +146,9 @@
             this.gbxDetalle.Controls.Add(this.label12);
             this.gbxDetalle.Controls.Add(this.txtNombre);
             this.gbxDetalle.Controls.Add(this.label9);
-            this.gbxDetalle.Location = new System.Drawing.Point(315, 12);
+            this.gbxDetalle.Location = new System.Drawing.Point(315, 43);
             this.gbxDetalle.Name = "gbxDetalle";
-            this.gbxDetalle.Size = new System.Drawing.Size(335, 511);
+            this.gbxDetalle.Size = new System.Drawing.Size(335, 439);
             this.gbxDetalle.TabIndex = 13;
             this.gbxDetalle.TabStop = false;
             this.gbxDetalle.Text = "Detalle Cliente Seleccionado";

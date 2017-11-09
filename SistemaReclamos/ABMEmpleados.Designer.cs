@@ -62,6 +62,10 @@
             this.txtCel = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.gbxDetalle = new System.Windows.Forms.GroupBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtFechaEgreso = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtFechaIngreso = new System.Windows.Forms.TextBox();
@@ -79,10 +83,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.gbxBuscador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.gbxConfirmarAccion.SuspendLayout();
@@ -443,6 +443,39 @@
             this.gbxDetalle.TabStop = false;
             this.gbxDetalle.Text = "Detalle Empleado Seleccionado";
             // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(109, 472);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(191, 20);
+            this.txtPass.TabIndex = 54;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(43, 475);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 13);
+            this.label5.TabIndex = 53;
+            this.label5.Text = "Contraseña:";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(109, 442);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(191, 20);
+            this.txtUsuario.TabIndex = 52;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(61, 445);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 13);
+            this.label10.TabIndex = 51;
+            this.label10.Text = "Usuario:";
+            // 
             // txtFechaEgreso
             // 
             this.txtFechaEgreso.Location = new System.Drawing.Point(109, 412);
@@ -609,38 +642,6 @@
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // txtPass
-            // 
-            this.txtPass.Location = new System.Drawing.Point(109, 472);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(191, 20);
-            this.txtPass.TabIndex = 54;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(43, 475);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 13);
-            this.label5.TabIndex = 53;
-            this.label5.Text = "Contraseña:";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(109, 442);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(191, 20);
-            this.txtUsuario.TabIndex = 52;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(61, 445);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 13);
-            this.label10.TabIndex = 51;
-            this.label10.Text = "Usuario:";
             // 
             // ABMEmpleados
             // 
