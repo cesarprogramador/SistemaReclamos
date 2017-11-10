@@ -60,6 +60,7 @@
             this.cbRespuesta.Name = "cbRespuesta";
             this.cbRespuesta.Size = new System.Drawing.Size(260, 21);
             this.cbRespuesta.TabIndex = 2;
+            this.cbRespuesta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbRespuesta_KeyPress);
             // 
             // txtConsulta
             // 
@@ -145,6 +146,7 @@
             this.Name = "ConsultasReclamos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultas del reclamos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConsultasReclamos_FormClosing);
             this.Load += new System.EventHandler(this.ConsultasReclamos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -123,17 +123,26 @@ namespace SistemaReclamos
 
             if (this.dgvDetalleProcesoReclamo.Rows.Count > 0)
             {
-                MessageBox.Show("Se inicia circuito para dar solución a reclamo!!!");
+                if (this.dgvDetalleProcesoReclamo.Rows.Count ==1) MessageBox.Show("Se inicia circuito para dar solución a reclamo!!!");
 
                 this.btnNuevo.Enabled = false;
 
                 this.CicloDeChequeo();
+            }
+            else
+            {
+                MessageBox.Show("Se cancelo el ingreso de un nuevo reclamo!!!");
+
+                this.btnNuevo.Enabled = true;
+                this.cbReferenciaReclamos.Enabled = true;
+                this.cbReferenciaReclamos.Text = "";
             }
         }
 
         private void CicloDeChequeo()
         {
             int fil = 0;
+            int bandera = 0;
          
             if (this.dgvDetalleProcesoReclamo.Rows.Count > 0)
             {
@@ -145,24 +154,40 @@ namespace SistemaReclamos
                 _formreclamo._idcliente = this.dgvClientes[0, this.dgvClientes.CurrentCell.RowIndex].Value.ToString();
                 _formreclamo._idempleado = "1";
 
-                while (this.dgvDetalleProcesoReclamo[1, fil].Value.ToString() != "1")
+                while ((bandera==0)&&(this.dgvDetalleProcesoReclamo[1, fil].Value.ToString() != "1"))
+                    {
+                        _formreclamo._tiporeclamo = this.txtTipoReclamo.Text;
+                        _formreclamo._idproblematica = this.dgvDetalleProcesoReclamo[1, fil].Value.ToString();
+                        _formreclamo._respuesta = this.dgvDetalleProcesoReclamo[3, fil].Value.ToString();
+                        _formreclamo._numpasos = fil.ToString();
+
+                        _formreclamo.ShowDialog();
+
+                        this.PoblarTablaHistorialReclamos();
+
+                        fil = this.dgvDetalleProcesoReclamo.Rows.Count - 1;
+
+                        if (fil <= 0) bandera = 1;
+                    }
+
+                if (bandera == 0)
                 {
-                    _formreclamo._tiporeclamo = this.txtTipoReclamo.Text;
-                    _formreclamo._idproblematica = this.dgvDetalleProcesoReclamo[1, fil].Value.ToString();
-                    _formreclamo._respuesta = this.dgvDetalleProcesoReclamo[3, fil].Value.ToString();
+                    if (this.dgvDetalleProcesoReclamo[1, fil].Value.ToString() == "1")
+                    {
+                        this.cbReferenciaReclamos.Enabled = true;
 
-                    _formreclamo.ShowDialog();
-
-                    this.PoblarTablaHistorialReclamos();
-
-                    fil = this.dgvDetalleProcesoReclamo.Rows.Count - 1;
+                        this.ListarNumerosReclamos();
+                    }
                 }
-
-                if (this.dgvDetalleProcesoReclamo[1, fil].Value.ToString() == "1")
+                else
                 {
+                    this.dgvDetalleProcesoReclamo.Rows.Clear();
+                    this.cbReferenciaReclamos.Text = "";
                     this.cbReferenciaReclamos.Enabled = true;
-
-                    this.ListarNumerosReclamos();
+                    this.txtTipoReclamo.Text = "";
+                    this.txtFechaIni.Text = "";
+                    this.txtFechaFin.Text = "";
+                    this.txtObservacionCierre.Text = "";
                 }
             }
         }
@@ -213,14 +238,12 @@ namespace SistemaReclamos
                 if (this.txtFechaFin.Text.Length > 0)
                 {
                     this.btnEliminar.Enabled = false;
-                    this.btnNuevo.Enabled = false;
                     this.txtObservacionCierre.Text = this._historial.Tables["Historial"].Rows[0][10].ToString();
                 }
                 else
                 {
                     this.btnEliminar.Enabled = true;
-                    this.btnNuevo.Enabled = true;
-                }
+                 }
             }
             else
             {

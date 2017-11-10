@@ -53,11 +53,11 @@
             this.txtBusDni = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.gbxHistorial = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtObservacion = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvReclamos = new System.Windows.Forms.DataGridView();
             this.dgvHistorialReclamos = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtObservacion = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.gbxBuscador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
@@ -123,29 +123,29 @@
             // aBMEmpleadosToolStripMenuItem
             // 
             this.aBMEmpleadosToolStripMenuItem.Name = "aBMEmpleadosToolStripMenuItem";
-            this.aBMEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.aBMEmpleadosToolStripMenuItem.Text = "ABM Empleados";
+            this.aBMEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.aBMEmpleadosToolStripMenuItem.Text = "Empleados";
             this.aBMEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.aBMEmpleadosToolStripMenuItem_Click);
             // 
             // aBMClientesToolStripMenuItem
             // 
             this.aBMClientesToolStripMenuItem.Name = "aBMClientesToolStripMenuItem";
-            this.aBMClientesToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.aBMClientesToolStripMenuItem.Text = "ABM Clientes";
+            this.aBMClientesToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.aBMClientesToolStripMenuItem.Text = "Clientes";
             this.aBMClientesToolStripMenuItem.Click += new System.EventHandler(this.aBMClientesToolStripMenuItem_Click);
             // 
             // aBMReclamosToolStripMenuItem
             // 
             this.aBMReclamosToolStripMenuItem.Name = "aBMReclamosToolStripMenuItem";
-            this.aBMReclamosToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.aBMReclamosToolStripMenuItem.Text = "ABM Reclamos";
+            this.aBMReclamosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.aBMReclamosToolStripMenuItem.Text = "Reclamos";
             this.aBMReclamosToolStripMenuItem.Click += new System.EventHandler(this.aBMReclamosToolStripMenuItem_Click);
             // 
             // aBMCierreDeReclamosToolStripMenuItem
             // 
             this.aBMCierreDeReclamosToolStripMenuItem.Name = "aBMCierreDeReclamosToolStripMenuItem";
-            this.aBMCierreDeReclamosToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.aBMCierreDeReclamosToolStripMenuItem.Text = "ABM Cierre de reclamos";
+            this.aBMCierreDeReclamosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.aBMCierreDeReclamosToolStripMenuItem.Text = "Cierre de reclamos";
             this.aBMCierreDeReclamosToolStripMenuItem.Click += new System.EventHandler(this.aBMCierreDeReclamosToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
@@ -299,6 +299,23 @@
             this.gbxHistorial.TabStop = false;
             this.gbxHistorial.Text = "Historial reclamos";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 533);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(174, 13);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Observación por cierre del reclamo:";
+            // 
+            // txtObservacion
+            // 
+            this.txtObservacion.Location = new System.Drawing.Point(195, 530);
+            this.txtObservacion.Multiline = true;
+            this.txtObservacion.Name = "txtObservacion";
+            this.txtObservacion.Size = new System.Drawing.Size(347, 46);
+            this.txtObservacion.TabIndex = 16;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvReclamos);
@@ -333,23 +350,6 @@
             this.dgvHistorialReclamos.Size = new System.Drawing.Size(525, 289);
             this.dgvHistorialReclamos.TabIndex = 13;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 533);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 13);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Observación por cierre del reclamo:";
-            // 
-            // txtObservacion
-            // 
-            this.txtObservacion.Location = new System.Drawing.Point(195, 530);
-            this.txtObservacion.Multiline = true;
-            this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.Size = new System.Drawing.Size(347, 46);
-            this.txtObservacion.TabIndex = 16;
-            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -360,7 +360,8 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenuPrincipal";
-            this.Text = "MenuPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Menú";
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

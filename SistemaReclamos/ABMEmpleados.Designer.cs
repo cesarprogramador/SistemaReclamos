@@ -93,7 +93,7 @@
             // cbxEliminado
             // 
             this.cbxEliminado.AutoSize = true;
-            this.cbxEliminado.Location = new System.Drawing.Point(100, 136);
+            this.cbxEliminado.Location = new System.Drawing.Point(122, 135);
             this.cbxEliminado.Name = "cbxEliminado";
             this.cbxEliminado.Size = new System.Drawing.Size(15, 14);
             this.cbxEliminado.TabIndex = 17;
@@ -102,7 +102,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 83);
+            this.label1.Location = new System.Drawing.Point(68, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 15;
@@ -133,15 +133,15 @@
             // cbBusTipoEmpleado
             // 
             this.cbBusTipoEmpleado.FormattingEnabled = true;
-            this.cbBusTipoEmpleado.Location = new System.Drawing.Point(100, 19);
+            this.cbBusTipoEmpleado.Location = new System.Drawing.Point(122, 18);
             this.cbBusTipoEmpleado.Name = "cbBusTipoEmpleado";
-            this.cbBusTipoEmpleado.Size = new System.Drawing.Size(191, 21);
+            this.cbBusTipoEmpleado.Size = new System.Drawing.Size(168, 21);
             this.cbBusTipoEmpleado.TabIndex = 48;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 23);
+            this.label2.Location = new System.Drawing.Point(26, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 13);
             this.label2.TabIndex = 47;
@@ -150,24 +150,24 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(5, 135);
+            this.label13.Location = new System.Drawing.Point(6, 135);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(94, 13);
+            this.label13.Size = new System.Drawing.Size(114, 13);
             this.label13.TabIndex = 16;
-            this.label13.Text = "Empleado activos:";
+            this.label13.Text = "Empleados eliminados:";
             // 
             // txtBusNombre
             // 
-            this.txtBusNombre.Location = new System.Drawing.Point(100, 79);
+            this.txtBusNombre.Location = new System.Drawing.Point(122, 78);
             this.txtBusNombre.Name = "txtBusNombre";
-            this.txtBusNombre.Size = new System.Drawing.Size(191, 20);
+            this.txtBusNombre.Size = new System.Drawing.Size(168, 20);
             this.txtBusNombre.TabIndex = 14;
             // 
             // txtBusApellido
             // 
-            this.txtBusApellido.Location = new System.Drawing.Point(100, 51);
+            this.txtBusApellido.Location = new System.Drawing.Point(122, 50);
             this.txtBusApellido.Name = "txtBusApellido";
-            this.txtBusApellido.Size = new System.Drawing.Size(191, 20);
+            this.txtBusApellido.Size = new System.Drawing.Size(168, 20);
             this.txtBusApellido.TabIndex = 13;
             // 
             // dgvEmpleados
@@ -214,7 +214,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(51, 55);
+            this.label4.Location = new System.Drawing.Point(73, 54);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 6;
@@ -222,15 +222,15 @@
             // 
             // txtBusDni
             // 
-            this.txtBusDni.Location = new System.Drawing.Point(100, 107);
+            this.txtBusDni.Location = new System.Drawing.Point(122, 106);
             this.txtBusDni.Name = "txtBusDni";
-            this.txtBusDni.Size = new System.Drawing.Size(191, 20);
+            this.txtBusDni.Size = new System.Drawing.Size(168, 20);
             this.txtBusDni.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(72, 111);
+            this.label3.Location = new System.Drawing.Point(94, 110);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 4;
@@ -290,6 +290,7 @@
             // 
             this.gbxConfirmarAccion.Controls.Add(this.btnCancelar);
             this.gbxConfirmarAccion.Controls.Add(this.btnAceptar);
+            this.gbxConfirmarAccion.Enabled = false;
             this.gbxConfirmarAccion.Location = new System.Drawing.Point(315, 529);
             this.gbxConfirmarAccion.Name = "gbxConfirmarAccion";
             this.gbxConfirmarAccion.Size = new System.Drawing.Size(335, 72);
@@ -580,6 +581,7 @@
             this.gbxAcciones.Controls.Add(this.btnEliminar);
             this.gbxAcciones.Controls.Add(this.btnNuevo);
             this.gbxAcciones.Controls.Add(this.btnModificar);
+            this.gbxAcciones.Enabled = false;
             this.gbxAcciones.Location = new System.Drawing.Point(656, 12);
             this.gbxAcciones.Name = "gbxAcciones";
             this.gbxAcciones.Size = new System.Drawing.Size(158, 589);
@@ -654,7 +656,7 @@
             this.Controls.Add(this.gbxAcciones);
             this.Name = "ABMEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ABM Empleados";
+            this.Text = "Empleados";
             this.Load += new System.EventHandler(this.ABMEmpleados_Load);
             this.gbxBuscador.ResumeLayout(false);
             this.gbxBuscador.PerformLayout();

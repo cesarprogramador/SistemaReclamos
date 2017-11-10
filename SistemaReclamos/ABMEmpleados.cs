@@ -49,6 +49,8 @@ namespace SistemaReclamos
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            this.LimpiarControles();
+  
             this.bandera = "N";
             this.txtFechaIngreso.Text = DateTime.Now.ToString("dd/MM/yyyy");
             this.txtFechaEgreso.Text = "";
@@ -58,6 +60,26 @@ namespace SistemaReclamos
             this.gbxAcciones.Enabled = false;
             this.gbxConfirmarAccion.Enabled = true;
             this.gbxBuscador.Enabled = false;
+        }
+
+        private void LimpiarControles()
+        {
+            this.txtApellido.Text = "";
+            this.txtNombre.Text = "";
+            this.txtDni.Text = "";
+            this.txtCel.Text = "";
+            this.txtTel.Text = "";
+            this.txtEmail.Text = "";
+            this.txtCalle.Text = "";
+            this.txtNumero.Text = "0";
+            this.txtPiso.Text = "";
+            this.txtDpto.Text = "";
+            this.cbTipoEmpleado.Text = "";
+            this.txtObservacion.Text = "";
+            this.txtFechaIngreso.Text = "";
+            this.txtFechaEgreso.Text = "";
+            this.txtUsuario.Text = "";
+            this.txtPass.Text = "";
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -98,6 +120,8 @@ namespace SistemaReclamos
             this.btnModificar.Enabled = false;
             this.gbxConfirmarAccion.Enabled = false;
             this.gbxBuscador.Enabled = true;
+
+            this.LimpiarControles();
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)

@@ -71,20 +71,20 @@ namespace SistemaReclamos
                 if (this._cliente.Tables["Cliente"].Rows.Count > 0)
                 {
                     this.txtCodAbonado.Text = this.dgvClientes[0, this.dgvClientes.CurrentCell.RowIndex].Value.ToString();
-                    this.txtApellido.Text = this._cliente.Tables["Cliente"].Rows[0][0].ToString();
-                    this.txtNombre.Text = this._cliente.Tables["Cliente"].Rows[0][1].ToString();
-                    this.txtDni.Text = this._cliente.Tables["Cliente"].Rows[0][2].ToString();
-                    this.txtCel.Text = this._cliente.Tables["Cliente"].Rows[0][3].ToString();
-                    this.txtTel.Text = this._cliente.Tables["Cliente"].Rows[0][4].ToString();
-                    this.txtEmail.Text = this._cliente.Tables["Cliente"].Rows[0][5].ToString();
-                    this.txtCalle.Text = this._cliente.Tables["Cliente"].Rows[0][6].ToString();
-                    this.txtNumero.Text = this._cliente.Tables["Cliente"].Rows[0][7].ToString();
-                    this.txtPiso.Text = this._cliente.Tables["Cliente"].Rows[0][8].ToString();
-                    this.txtDpto.Text = this._cliente.Tables["Cliente"].Rows[0][9].ToString();
+                    this.txtApellido.Text = this._cliente.Tables["Cliente"].Rows[0][1].ToString();
+                    this.txtNombre.Text = this._cliente.Tables["Cliente"].Rows[0][2].ToString();
+                    this.txtDni.Text = this._cliente.Tables["Cliente"].Rows[0][3].ToString();
+                    this.txtCel.Text = this._cliente.Tables["Cliente"].Rows[0][4].ToString();
+                    this.txtTel.Text = this._cliente.Tables["Cliente"].Rows[0][5].ToString();
+                    this.txtEmail.Text = this._cliente.Tables["Cliente"].Rows[0][6].ToString();
+                    this.txtCalle.Text = this._cliente.Tables["Cliente"].Rows[0][7].ToString();
+                    this.txtNumero.Text = this._cliente.Tables["Cliente"].Rows[0][8].ToString();
+                    this.txtPiso.Text = this._cliente.Tables["Cliente"].Rows[0][9].ToString();
+                    this.txtDpto.Text = this._cliente.Tables["Cliente"].Rows[0][10].ToString();
 
-                    this.cbTipoServicio.Text = this._cliente.Tables["Cliente"].Rows[0][10].ToString();
-                    this.txtNumReferencia.Text = this._cliente.Tables["Cliente"].Rows[0][11].ToString();
-                    this.txtObservacion.Text = this._cliente.Tables["Cliente"].Rows[0][12].ToString();
+                    this.cbTipoServicio.Text = this._cliente.Tables["Cliente"].Rows[0][11].ToString();
+                    this.txtNumReferencia.Text = this._cliente.Tables["Cliente"].Rows[0][12].ToString();
+                    this.txtObservacion.Text = this._cliente.Tables["Cliente"].Rows[0][13].ToString();
                 }
 
                 this.gbxAcciones.Enabled = true;
@@ -102,6 +102,26 @@ namespace SistemaReclamos
             this.gbxAcciones.Enabled = false;
             this.gbxConfirmarAccion.Enabled = true;
             this.gbxBuscador.Enabled = false;
+
+            this.LimpiarControles();
+        }
+
+        private void LimpiarControles()
+        {
+            this.txtCodAbonado.Text = "";
+            this.txtApellido.Text = "";
+            this.txtNombre.Text = "";
+            this.txtDni.Text = "";
+            this.txtCel.Text = "";
+            this.txtTel.Text = "";
+            this.txtEmail.Text = "";
+            this.txtCalle.Text = "";
+            this.txtNumero.Text = "0";
+            this.txtPiso.Text = "";
+            this.txtDpto.Text = "";
+            this.cbTipoServicio.Text = "";
+            this.txtNumReferencia.Text = "";
+            this.txtObservacion.Text = "";
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -135,6 +155,8 @@ namespace SistemaReclamos
             this.btnModificar.Enabled = false;
             this.gbxConfirmarAccion.Enabled = false;
             this.gbxBuscador.Enabled = true;
+
+            this.LimpiarControles();
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -154,6 +176,7 @@ namespace SistemaReclamos
             this._clientes.observacion = this.txtObservacion.Text;
             this._clientes.fechaingreso = DateTime.Now.ToString("yyyy/MM/dd");
             this._clientes.fechaegreso = DateTime.Now.ToString("yyyy/MM/dd");
+            this._clientes.idtipopersona = "2";
            
             this._clientes.accion = this.bandera;
             this._clientes.fechaaccion = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss");

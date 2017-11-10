@@ -355,6 +355,7 @@
             this.gbxAcciones.Controls.Add(this.btnEliminar);
             this.gbxAcciones.Controls.Add(this.btnNuevo);
             this.gbxAcciones.Controls.Add(this.btnModificar);
+            this.gbxAcciones.Enabled = false;
             this.gbxAcciones.Location = new System.Drawing.Point(656, 12);
             this.gbxAcciones.Name = "gbxAcciones";
             this.gbxAcciones.Size = new System.Drawing.Size(158, 589);
@@ -422,6 +423,7 @@
             // 
             this.gbxConfirmarAccion.Controls.Add(this.btnCancelar);
             this.gbxConfirmarAccion.Controls.Add(this.btnAceptar);
+            this.gbxConfirmarAccion.Enabled = false;
             this.gbxConfirmarAccion.Location = new System.Drawing.Point(315, 529);
             this.gbxConfirmarAccion.Name = "gbxConfirmarAccion";
             this.gbxConfirmarAccion.Size = new System.Drawing.Size(335, 72);
@@ -481,7 +483,7 @@
             // cbxEliminado
             // 
             this.cbxEliminado.AutoSize = true;
-            this.cbxEliminado.Location = new System.Drawing.Point(90, 133);
+            this.cbxEliminado.Location = new System.Drawing.Point(110, 134);
             this.cbxEliminado.Name = "cbxEliminado";
             this.cbxEliminado.Size = new System.Drawing.Size(15, 14);
             this.cbxEliminado.TabIndex = 17;
@@ -490,16 +492,16 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(5, 132);
+            this.label13.Location = new System.Drawing.Point(9, 134);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(84, 13);
+            this.label13.Size = new System.Drawing.Size(99, 13);
             this.label13.TabIndex = 16;
-            this.label13.Text = "Clientes activos:";
+            this.label13.Text = "Clientes eliminados:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 80);
+            this.label1.Location = new System.Drawing.Point(56, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 15;
@@ -507,16 +509,16 @@
             // 
             // txtBusNombre
             // 
-            this.txtBusNombre.Location = new System.Drawing.Point(90, 76);
+            this.txtBusNombre.Location = new System.Drawing.Point(110, 80);
             this.txtBusNombre.Name = "txtBusNombre";
-            this.txtBusNombre.Size = new System.Drawing.Size(191, 20);
+            this.txtBusNombre.Size = new System.Drawing.Size(167, 20);
             this.txtBusNombre.TabIndex = 14;
             // 
             // txtBusApellido
             // 
-            this.txtBusApellido.Location = new System.Drawing.Point(90, 48);
+            this.txtBusApellido.Location = new System.Drawing.Point(110, 52);
             this.txtBusApellido.Name = "txtBusApellido";
-            this.txtBusApellido.Size = new System.Drawing.Size(191, 20);
+            this.txtBusApellido.Size = new System.Drawing.Size(167, 20);
             this.txtBusApellido.TabIndex = 13;
             // 
             // dgvClientes
@@ -563,7 +565,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 52);
+            this.label4.Location = new System.Drawing.Point(61, 56);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 6;
@@ -571,15 +573,15 @@
             // 
             // txtBusDni
             // 
-            this.txtBusDni.Location = new System.Drawing.Point(90, 104);
+            this.txtBusDni.Location = new System.Drawing.Point(110, 108);
             this.txtBusDni.Name = "txtBusDni";
-            this.txtBusDni.Size = new System.Drawing.Size(191, 20);
+            this.txtBusDni.Size = new System.Drawing.Size(167, 20);
             this.txtBusDni.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(62, 108);
+            this.label3.Location = new System.Drawing.Point(82, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 4;
@@ -587,15 +589,15 @@
             // 
             // txtBusCodAbonado
             // 
-            this.txtBusCodAbonado.Location = new System.Drawing.Point(90, 20);
+            this.txtBusCodAbonado.Location = new System.Drawing.Point(110, 24);
             this.txtBusCodAbonado.Name = "txtBusCodAbonado";
-            this.txtBusCodAbonado.Size = new System.Drawing.Size(191, 20);
+            this.txtBusCodAbonado.Size = new System.Drawing.Size(167, 20);
             this.txtBusCodAbonado.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 24);
+            this.label2.Location = new System.Drawing.Point(30, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 2;
@@ -612,7 +614,7 @@
             this.Controls.Add(this.gbxBuscador);
             this.Name = "ABMClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ABMClientes";
+            this.Text = "Clientes";
             this.Load += new System.EventHandler(this.ABMClientes_Load);
             this.gbxDetalle.ResumeLayout(false);
             this.gbxDetalle.PerformLayout();

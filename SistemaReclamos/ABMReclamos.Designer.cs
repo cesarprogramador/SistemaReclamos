@@ -613,7 +613,7 @@
             this.Controls.Add(this.gbxAcciones);
             this.Name = "ABMReclamos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ABM Reclamos";
+            this.Text = "Reclamos";
             this.Load += new System.EventHandler(this.ABMReclamos_Load);
             this.gbxBuscador.ResumeLayout(false);
             this.gbxBuscador.PerformLayout();

@@ -204,7 +204,7 @@
             this.Controls.Add(this.gbxBuscador);
             this.Name = "ABMCierreReclamos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ABM Cierre de Reclamos";
+            this.Text = "Cierre de Reclamos";
             this.Load += new System.EventHandler(this.ABMCierreReclamos_Load);
             this.gbxConfirmarAccion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReclamos)).EndInit();
