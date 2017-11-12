@@ -100,6 +100,7 @@ namespace SistemaReclamos
             this._clientes.idpersona = "0";
             this.txtCodAbonado.Enabled = false;
             this.gbxAcciones.Enabled = false;
+            this.btnNuevo.Enabled = false;
             this.gbxConfirmarAccion.Enabled = true;
             this.gbxBuscador.Enabled = false;
 
@@ -128,6 +129,7 @@ namespace SistemaReclamos
         {
             this.bandera = "M";
             this.gbxAcciones.Enabled = false;
+            this.btnNuevo.Enabled = false;
             this.gbxConfirmarAccion.Enabled = true;
             this.gbxBuscador.Enabled = false;
         }
@@ -138,6 +140,7 @@ namespace SistemaReclamos
             this.gbxAcciones.Enabled = false;
             this.gbxConfirmarAccion.Enabled = true;
             this.gbxBuscador.Enabled = false;
+            this.btnNuevo.Enabled = false;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -155,6 +158,7 @@ namespace SistemaReclamos
             this.btnModificar.Enabled = false;
             this.gbxConfirmarAccion.Enabled = false;
             this.gbxBuscador.Enabled = true;
+            this.btnNuevo.Enabled = true;
 
             this.LimpiarControles();
         }

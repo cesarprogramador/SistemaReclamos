@@ -353,12 +353,11 @@
             // 
             this.gbxAcciones.Controls.Add(this.btnVolver);
             this.gbxAcciones.Controls.Add(this.btnEliminar);
-            this.gbxAcciones.Controls.Add(this.btnNuevo);
             this.gbxAcciones.Controls.Add(this.btnModificar);
             this.gbxAcciones.Enabled = false;
-            this.gbxAcciones.Location = new System.Drawing.Point(656, 12);
+            this.gbxAcciones.Location = new System.Drawing.Point(659, 99);
             this.gbxAcciones.Name = "gbxAcciones";
-            this.gbxAcciones.Size = new System.Drawing.Size(158, 589);
+            this.gbxAcciones.Size = new System.Drawing.Size(158, 502);
             this.gbxAcciones.TabIndex = 14;
             this.gbxAcciones.TabStop = false;
             this.gbxAcciones.Text = "Acciones";
@@ -367,7 +366,7 @@
             // 
             this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnVolver.Image = global::SistemaReclamos.Properties.Resources.Home;
-            this.btnVolver.Location = new System.Drawing.Point(36, 535);
+            this.btnVolver.Location = new System.Drawing.Point(38, 448);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(95, 41);
             this.btnVolver.TabIndex = 13;
@@ -381,7 +380,7 @@
             // 
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnEliminar.Image = global::SistemaReclamos.Properties.Resources.Delete;
-            this.btnEliminar.Location = new System.Drawing.Point(36, 280);
+            this.btnEliminar.Location = new System.Drawing.Point(38, 156);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(95, 39);
             this.btnEliminar.TabIndex = 12;
@@ -395,7 +394,7 @@
             // 
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnNuevo.Image = global::SistemaReclamos.Properties.Resources.Add;
-            this.btnNuevo.Location = new System.Drawing.Point(36, 44);
+            this.btnNuevo.Location = new System.Drawing.Point(697, 26);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(95, 41);
             this.btnNuevo.TabIndex = 10;
@@ -409,7 +408,7 @@
             // 
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnModificar.Image = global::SistemaReclamos.Properties.Resources.Edit;
-            this.btnModificar.Location = new System.Drawing.Point(36, 160);
+            this.btnModificar.Location = new System.Drawing.Point(38, 36);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(95, 39);
             this.btnModificar.TabIndex = 11;
@@ -610,6 +609,7 @@
             this.ClientSize = new System.Drawing.Size(829, 610);
             this.Controls.Add(this.gbxDetalle);
             this.Controls.Add(this.gbxAcciones);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.gbxConfirmarAccion);
             this.Controls.Add(this.gbxBuscador);
             this.Name = "ABMClientes";

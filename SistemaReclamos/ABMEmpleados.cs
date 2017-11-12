@@ -45,6 +45,7 @@ namespace SistemaReclamos
             this.txtBusNombre.Text = "";
             this.txtBusDni.Text = "";
             this.cbxEliminado.Checked = false;
+            this.btnNuevo.Enabled = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -88,6 +89,7 @@ namespace SistemaReclamos
 
             this.txtFechaIngreso.Enabled = false;
             this.txtFechaEgreso.Enabled = false;
+            this.btnNuevo.Enabled = false;
 
             this.gbxAcciones.Enabled = false;
             this.gbxConfirmarAccion.Enabled = true;
@@ -103,6 +105,7 @@ namespace SistemaReclamos
             this.gbxAcciones.Enabled = false;
             this.gbxConfirmarAccion.Enabled = true;
             this.gbxBuscador.Enabled = false;
+            this.btnNuevo.Enabled = false;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -120,7 +123,8 @@ namespace SistemaReclamos
             this.btnModificar.Enabled = false;
             this.gbxConfirmarAccion.Enabled = false;
             this.gbxBuscador.Enabled = true;
-
+            this.btnNuevo.Enabled = true;
+       
             this.LimpiarControles();
         }
 
