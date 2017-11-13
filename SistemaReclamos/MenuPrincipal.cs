@@ -159,6 +159,10 @@ namespace SistemaReclamos
                 this.dgvReclamos.Columns[0].Visible = false;
                 this.dgvReclamos.Columns[6].Visible = false;
             }
+            else
+            {
+                this.dgvHistorialReclamos.DataSource=null;
+            }
         }
 
         private void aBMCierreDeReclamosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -183,8 +187,7 @@ namespace SistemaReclamos
             this._reclamos = new ClassReclamos();
 
             this._reclamos.numreferencia = this.dgvReclamos[3,this.dgvReclamos.CurrentCell.RowIndex].Value.ToString();
-            this.txtObservacion.Text = this.dgvReclamos[6, this.dgvReclamos.CurrentCell.RowIndex].Value.ToString();
-
+          
             this.dgvHistorialReclamos.DataSource = this._reclamos.BuscarHistorialReclamos(this._reclamos, "Historial");
             this.dgvHistorialReclamos.DataMember = "Historial";
 
@@ -197,6 +200,9 @@ namespace SistemaReclamos
                 this.dgvHistorialReclamos.Columns[4].Visible = false;
                 this.dgvHistorialReclamos.Columns[5].Visible = false;
                 this.dgvHistorialReclamos.Columns[9].Visible = false;
+                this.dgvHistorialReclamos.Columns[10].Visible = false;
+                
+                this.txtObservacion.Text = this.dgvHistorialReclamos[10,0].Value.ToString();
             }
         }
     }
