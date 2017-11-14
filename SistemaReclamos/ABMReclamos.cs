@@ -65,13 +65,13 @@ namespace SistemaReclamos
                 if (this._cliente.Tables["Cliente"].Rows.Count > 0)
                 {
                     this.txtCodigo.Text = this._clientes.idpersona;
-                    this.txtDni.Text = this._cliente.Tables["Cliente"].Rows[0][2].ToString();
-                    this.txtApellidoNombre.Text = this._cliente.Tables["Cliente"].Rows[0][0].ToString()+", "+this._cliente.Tables["Cliente"].Rows[0][1].ToString();
-                    this.txtTelefono.Text = this._cliente.Tables["Cliente"].Rows[0][3].ToString()+"/"+this._cliente.Tables["Cliente"].Rows[0][4].ToString();
-                    this.txtDomicilio.Text = this._cliente.Tables["Cliente"].Rows[0][6].ToString()+" Nº " +this._cliente.Tables["Cliente"].Rows[0][7].ToString() + " Pso:"+this._cliente.Tables["Cliente"].Rows[0][8].ToString()+" Dpto:"+this._cliente.Tables["Cliente"].Rows[0][9].ToString();
-                    this.txtObservacion.Text = this._cliente.Tables["Cliente"].Rows[0][12].ToString();
-                    this.txtTipoServicio.Text = this._cliente.Tables["Cliente"].Rows[0][10].ToString();
-                    this.txtCorreo.Text = this._cliente.Tables["Cliente"].Rows[0][5].ToString();
+                    this.txtDni.Text = this._cliente.Tables["Cliente"].Rows[0][3].ToString();
+                    this.txtApellidoNombre.Text = this._cliente.Tables["Cliente"].Rows[0][1].ToString()+", "+this._cliente.Tables["Cliente"].Rows[0][2].ToString();
+                    this.txtTelefono.Text = this._cliente.Tables["Cliente"].Rows[0][4].ToString()+"/"+this._cliente.Tables["Cliente"].Rows[0][5].ToString();
+                    this.txtDomicilio.Text = this._cliente.Tables["Cliente"].Rows[0][7].ToString()+" Nº " +this._cliente.Tables["Cliente"].Rows[0][8].ToString() + " Pso:"+this._cliente.Tables["Cliente"].Rows[0][9].ToString()+" Dpto:"+this._cliente.Tables["Cliente"].Rows[0][10].ToString();
+                    this.txtObservacion.Text = this._cliente.Tables["Cliente"].Rows[0][13].ToString();
+                    this.txtTipoServicio.Text = this._cliente.Tables["Cliente"].Rows[0][11].ToString();
+                    this.txtCorreo.Text = this._cliente.Tables["Cliente"].Rows[0][6].ToString();
 
                     this.ListarNumerosReclamos();
 
@@ -79,6 +79,7 @@ namespace SistemaReclamos
                     this.txtFechaIni.Text = "";
                     this.txtFechaFin.Text = "";
                     this.dgvDetalleProcesoReclamo.Rows.Clear();
+                    this.txtObservacionCierre.Text = "";
                 }
 
                 this.gbxAcciones.Enabled = true;

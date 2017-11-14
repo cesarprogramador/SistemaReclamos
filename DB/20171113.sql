@@ -706,7 +706,7 @@ if (_idcliente<=0) then
 else			
 	PREPARE STMT FROM "SELECT a.idpersona,a.apellido,a.nombre,a.dni,a.cel,a.tel,a.email,a.calle,a.numero,a.piso,a.dpto,b.servicio,a.numreferencia,a.observacion
 				   FROM personas a INNER JOIN tiposervicios b ON (a.idtiposervicio=b.idtiposervicio)
-				   WHERE (a.idpersona LIKE CONCAT(? ,'%'))";
+				   WHERE (a.idpersona=?)";
 		
 		SET @idpersona = _idcliente; 
 		EXECUTE STMT USING @idpersona;
