@@ -1,15 +1,17 @@
-D:\FENIX\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\bin\Debug\SistemaReclamos.exe.config
-d:\FENIX\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\bin\Debug\SistemaReclamos.exe
-d:\FENIX\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\bin\Debug\SistemaReclamos.pdb
-d:\FENIX\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.csprojResolveAssemblyReference.cache
-d:\FENIX\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.ABMCierreReclamos.resources
-d:\FENIX\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.ABMClientes.resources
-d:\FENIX\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.ABMEmpleados.resources
-d:\FENIX\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.ABMReclamos.resources
-d:\FENIX\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.ConsultasReclamos.resources
-d:\FENIX\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.FormLogin.resources
-d:\FENIX\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.MenuPrincipal.resources
-d:\FENIX\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.Properties.Resources.resources
-d:\FENIX\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.csproj.GenerateResource.Cache
-d:\FENIX\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.exe
-d:\FENIX\Documents\Visual Studio 2012\Projects\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.pdb
+C:\Users\Salo\Desktop\sistema15112017\SistemaReclamos\SistemaReclamos\SistemaReclamos\bin\Debug\SistemaReclamos.exe.config
+C:\Users\Salo\Desktop\sistema15112017\SistemaReclamos\SistemaReclamos\SistemaReclamos\bin\Debug\SistemaReclamos.exe
+C:\Users\Salo\Desktop\sistema15112017\SistemaReclamos\SistemaReclamos\SistemaReclamos\bin\Debug\SistemaReclamos.pdb
+C:\Users\Salo\Desktop\sistema15112017\SistemaReclamos\SistemaReclamos\SistemaReclamos\bin\Debug\MySql.Data.dll
+C:\Users\Salo\Desktop\sistema15112017\SistemaReclamos\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.csprojResolveAssemblyReference.cache
+C:\Users\Salo\Desktop\sistema15112017\SistemaReclamos\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.ABMCierreReclamos.resources
+C:\Users\Salo\Desktop\sistema15112017\SistemaReclamos\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.ABMClientes.resources
+C:\Users\Salo\Desktop\sistema15112017\SistemaReclamos\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.ABMEmpleados.resources
+C:\Users\Salo\Desktop\sistema15112017\SistemaReclamos\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.ABMReclamos.resources
+C:\Users\Salo\Desktop\sistema15112017\SistemaReclamos\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.ConsultasReclamos.resources
+C:\Users\Salo\Desktop\sistema15112017\SistemaReclamos\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.FormLogin.resources
+C:\Users\Salo\Desktop\sistema15112017\SistemaReclamos\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.MenuPrincipal.resources
+C:\Users\Salo\Desktop\sistema15112017\SistemaReclamos\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.Properties.Resources.resources
+C:\Users\Salo\Desktop\sistema15112017\SistemaReclamos\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.csproj.GenerateResource.Cache
+C:\Users\Salo\Desktop\sistema15112017\SistemaReclamos\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.csproj.CoreCompileInputs.cache
+C:\Users\Salo\Desktop\sistema15112017\SistemaReclamos\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.exe
+C:\Users\Salo\Desktop\sistema15112017\SistemaReclamos\SistemaReclamos\SistemaReclamos\obj\Debug\SistemaReclamos.pdb
